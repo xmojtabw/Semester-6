@@ -1,0 +1,130 @@
+\documentclass[a4paper,12pt,fleqn]{report}
+
+\usepackage{geometry}
+\usepackage{fancyhdr} 
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+ 
+\usepackage{xcolor} 
+\usepackage{xepersian}
+\usepackage{fontspec} 
+
+\settextfont[Path=./Fonts/, BoldFont=XB ZarBd.ttf, ItalicFont=XB ZarIt.ttf]{XB Zar.ttf}
+\setlatintextfont{Times New Roman}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
+\linespread{1.5}
+
+% اطلاعات تکلیف
+\newcommand{\courseName}{درس ارائه مطالب علمی و فنی}
+\newcommand{\courseTeacher}{دکتر شیرین بقولی زاده}
+\newcommand{\assignmentNumber}{اول}
+\newcommand{\facultyName}{دانشکده مهندسی برق و کامپیوتر}
+\newcommand{\universityName}{دانشگاه صنعتی اصفهان}
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \huge\bfseries \thechapter.\ #1\par\nobreak
+      \vskip 40\p@
+    \fi
+  }}
+\renewcommand{\@makeschapterhead}[1]{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \huge\bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+% صفحه کاور
+\newcommand{\coverpage}{
+    \begin{center}
+        % لوگوی دانشگاه
+        \includegraphics[width=5cm]{iut_logo.png}\\[1cm]
+        
+        % عنوان دانشگاه
+        \Huge{\textbf{\universityName}}\\[0.5cm]
+        \Large{\facultyName}\\[1.5cm]
+        
+        % اطلاعات تکلیف
+        \Huge{\textbf{تکلیف \assignmentNumber}}\\[1cm]
+        \Large{\textbf{\courseName}}\\[0.5cm]
+        \Large{\textbf{استاد: \courseTeacher}}\\[2cm]
+        
+        % اطلاعات دانشجو
+        \normalsize
+        \begin{tabbing}
+            \hspace*{10cm}\=\kill
+            \textbf{زمان ارائه صورت تمرین:} \> ۲۵ بهمن ۱۴۰۳ \\[0.3cm]
+            \textbf{زمان نهایی ارائه پاسخ‌ها:} \> ۷ اسفند ۱۴۰۳ \\
+        \end{tabbing}
+
+        \vfill
+        {بهار ۱۴۰۳-۱۴۰۴}
+        
+    \end{center}
+    \thispagestyle{empty}
+    \newpage
+}
+
+% تنظیمات هدر
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\textbf{\courseName}}
+    \fancyhead[R]{\textbf{تکلیف \assignmentNumber}}
+    \fancyfoot[C]{\thepage}
+}
+\pagestyle{plain}
+
+\begin{document}
+
+% کاور
+\coverpage
+\section*{اعضای گروه}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{نقش در گروه} & \textbf{شماره دانشجویی} & \textbf{نام و نام خانوادگی} \\
+        \hline
+        سرگروه &  &  \\
+        \hline
+        عضو اول &  &  \\
+        \hline
+        عضو دوم &  &  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\vspace{10pt}
+\hrule
+\vspace{10pt}
+
+\begin{enumerate}
+    \item \textbf{سه موضوعی که به آن علاقه‌مند هستید را مشخص کنید.}
+    \begin{itemize}
+        \item اولویت ۱:
+        \item اولویت ۲: 
+        \item اولویت ۳: 
+    \end{itemize}
+    
+    \item 
+    \textbf{در مورد اولویت اول گروه خود، بین ۴ تا ۶ خط توضیح دهید و دلیل علاقه‌مندی گروه خود را بیان کنید. همچنین به مهارت‌ها و توانمندی‌های اعضای گروه اشاره نمایید.}
+    
+    \item
+    \textbf{    حداقل ۳ مقاله معتبر علمی (کنفرانس یا ژورنال) مرتبط با موضوع انتخاب‌شده را نام ببرید و توضیح دهید که چرا این منابع را انتخاب کرده‌اید. در قسمت بعدی منابع را طبق استاندارد IEEE ارجاع دهید.
+    }    
+    \item 
+    \textbf{مراجع}
+    
+\end{enumerate}
+
+\end{document}
+
