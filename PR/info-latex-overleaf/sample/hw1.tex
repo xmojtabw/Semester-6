@@ -1,0 +1,196 @@
+\documentclass[a4paper,12pt,fleqn]{report}
+
+\usepackage{geometry}
+\usepackage{fancyhdr} 
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{enumitem}
+ 
+\usepackage{xcolor} 
+\usepackage{xepersian}
+\usepackage{fontspec} 
+
+
+\settextfont{XB Zar}
+\setlatintextfont{Times New Roman}
+
+\geometry{top=2.5cm, bottom=2.5cm, left=3cm, right=3cm}
+\linespread{1.5}
+
+% اطلاعات تکلیف
+\newcommand{\courseName}{درس ارائه مطالب علمی و فنی}
+\newcommand{\courseTeacher}{دکتر شیرین بقولی زاده}
+\newcommand{\assignmentNumber}{اول}
+\newcommand{\facultyName}{دانشکده مهندسی برق و کامپیوتر}
+\newcommand{\universityName}{دانشگاه صنعتی اصفهان}
+
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \huge\bfseries \thechapter.\ #1\par\nobreak
+      \vskip 40\p@
+    \fi
+  }}
+\renewcommand{\@makeschapterhead}[1]{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedleft
+    \normalfont
+    \huge\bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+\ExplSyntaxOn
+\NewDocumentCommand{\ReverseWords}{m}
+{
+	\seq_set_split:Nnn \l_tmpa_seq { ~ } { #1 } 
+	\seq_reverse:N \l_tmpa_seq 
+	\seq_use:Nn \l_tmpa_seq { ~ } 
+}
+\ExplSyntaxOff
+
+% صفحه کاور
+\newcommand{\coverpage}{
+    \begin{center}
+        % لوگوی دانشگاه
+        \includegraphics[width=5cm]{iut_logo.png}\\[1cm]
+        
+        % عنوان دانشگاه
+        \Huge{\textbf{\universityName}}\\[0.5cm]
+        \Large{\facultyName}\\[1.5cm]
+        
+        % اطلاعات تکلیف
+        \Huge{\textbf{تکلیف \assignmentNumber}}\\[1cm]
+        \Large{\textbf{\courseName}}\\[0.5cm]
+        \Large{\textbf{استاد: \courseTeacher}}\\[2cm]
+        
+        % اطلاعات دانشجو
+        \normalsize
+        \begin{tabbing}
+            \hspace*{10cm}\=\kill
+            \textbf{زمان ارائه صورت تمرین:} \> ۲۵ بهمن ۱۴۰۳ \\[0.3cm]
+            \textbf{زمان نهایی ارائه پاسخ‌ها:} \> ۷ اسفند ۱۴۰۳ \\
+        \end{tabbing}
+
+        \vfill
+        {بهار ۱۴۰۳-۱۴۰۴}
+        
+    \end{center}
+    \thispagestyle{empty}
+    \newpage
+}
+
+% تنظیمات هدر
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\textbf{\courseName}}
+    \fancyhead[R]{\textbf{تکلیف \assignmentNumber}}
+    \fancyfoot[C]{\thepage}
+}
+\pagestyle{plain}
+
+\begin{document}
+
+% کاور
+\coverpage
+\section*{اعضای گروه}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{نقش در گروه} & \textbf{شماره دانشجویی} & \textbf{نام و نام خانوادگی} \\
+        \hline
+        سرگروه  & 40120523 & کوروش جمشیدی \\
+        \hline
+        عضو اول &  40117773 & سامان اصغری  \\
+        \hline
+        عضو دوم & 40131983 & مهتا میرزائی  \\
+        \hline
+        		عضو سوم & 40131383 &  مجتبی ملائی  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\vspace{10pt}
+\hrule
+\vspace{10pt}
+
+	\begin{enumerate}
+	    \item \textbf{سه موضوعی که به آن علاقه‌مند هستید را مشخص کنید.}
+	    \begin{itemize}
+	        \item اولویت ۱:
+	        کابرد های نوین شبکه های عصبی و یادگیری عمیق
+	        \item اولویت ۲: 
+	        شبکه های عصبی
+	        \item اولویت ۳: 
+	        کابرد های هوش مصنوعی در امنیت سایبری
+	    \end{itemize}
+	    
+	    \item 
+	    \textbf{در مورد اولویت اول گروه خود، بین ۴ تا ۶ خط توضیح دهید و دلیل علاقه‌مندی گروه خود را بیان کنید. همچنین به مهارت‌ها و توانمندی‌های اعضای گروه اشاره نمایید.}
+	    
+	    
+	    
+	    شبکه‌های عصبی و یادگیری عمیق تحولاتی اساسی در پردازش تصویر، زبان طبیعی و تحلیل داده ایجاد کرده‌اند. از بهبود تشخیص بیماری‌ها تا شناسایی تهدیدات سایبری و تحلیل محتوای جعلی، این فناوری‌ها در حوزه‌های متعددی به کار گرفته می‌شوند. همچنین، کاربردهای نوینی در شخصی‌سازی خدمات و تصمیم‌گیری هوشمند در حال گسترش است. ما این حوزه را انتخاب کردیم زیرا علاوه بر علاقه‌مندی، توانایی‌های تیم ما در زمینه های شبکه های عصبی، یادگیری ماشین، برنامه نویسی و امنیت می‌تواند در درک بهتر و پیشبرد این موضوع مفید باشد. 
+	    
+	   
+	    
+    
+    
+    \item
+    \textbf{    حداقل ۳ مقاله معتبر علمی (کنفرانس یا ژورنال) مرتبط با موضوع انتخاب‌شده را نام ببرید و توضیح دهید که چرا این منابع را انتخاب کرده‌اید. در قسمت بعدی منابع را طبق استاندارد IEEE ارجاع دهید.
+    } 
+    
+    \begin{enumerate}[label=\textbf{\arabic*)}]
+    	
+    	
+    	\begin{latin}
+    	\item \textbf{A deep convolutional neural network model to classify heartbeats}
+    	\begin{persian}
+    		این مقاله با ۱.۸۱۸ امتیاز پژوهشی، 1285 استناد، 21 توصیه در ResearchGate و 1094 استناد در ،ScienceDirect از مقالات تأثیرگذار در تشخیص بیماری‌های قلبی با یادگیری عمیق است. این مقاله نشان می‌دهد که یک شبکه عصبی پیچشی ۹ لایه می‌تواند پنج نوع ضربان قلب را در سیگنال‌های ECG با دقت ۹۳٪ تشخیص دهد. ما این مقاله را به دلیل کاربرد عملی شبکه‌های عصبی در پزشکی و ارتباط آن با علاقه‌مندی ما به یادگیری عمیق و هوش مصنوعی انتخاب کردیم. 
+    		\cite{10127341}
+    	\end{persian}
+    	\end{latin}
+
+    	\begin{latin}
+	\item \textbf{Deepfake Detection through Deep Learning}
+	\begin{persian}
+		این مقاله با عنوان "تشخیص دیپ‌فیک از طریق یادگیری عمیق" در سال ۲۰۲۰ در کنفرانس IEEE منتشر شده و تاکنون ۱۱۷ استناد در Google Scholar دریافت کرده است. این پژوهش به بررسی تکنیک‌های تشخیص ویدئوهای دیپ‌فیک با استفاده از مدل‌های یادگیری عمیق مانند Xception و MobileNet می‌پردازد. با توجه به گسترش ویدئوهای جعلی و تأثیرات منفی آن‌ها، این مقاله به‌عنوان منبعی ارزشمند در حوزه امنیت سایبری و پردازش تصویر شناخته می‌شود. انتخاب این مقاله به دلیل همخوانی با علاقه‌مندی ما به کاربردهای نوین هوش مصنوعی در امنیت سایبری و اهمیت تشخیص محتوای جعلی است. 
+		\cite{9302547}
+	\end{persian}
+	\end{latin}
+
+
+	\begin{latin}
+		\item \textbf{An Effective Phishing Detection Model Based on Character Level Convolutional Neural Network from URL}
+		\begin{persian}
+این مقاله در ResearchGate امتیاز پژوهشی ۵.۸۵ دارد و 148 استناد دریافت کرده است. همچنین با 1,617 بازدید و 1 توصیه، به‌عنوان یک تحقیق قابل توجه شناخته می‌شود. در MDPI نیز امتیاز توجه 4 دارد. این پژوهش با استفاده از شبکه عصبی پیچشی سطح کاراکتر، فیشینگ را از طریق تحلیل URL شناسایی می‌کند. ما این مقاله را به دلیل ارتباط آن با امنیت سایبری و کاربرد یادگیری عمیق در تشخیص تهدیدات آنلاین انتخاب کردیم.
+			\cite{electronics9091514}
+		\end{persian}
+	\end{latin}
+    \end{enumerate}
+      
+    \item 
+    \textbf{مراجع}
+    \begin{latin}
+    \vspace{-4\baselineskip}
+\begingroup
+\let\clearpage\relax  
+\renewcommand{\bibname}{}
+
+\bibliographystyle{ieeetr}  % IEEE reference style
+\bibliography{references}  
+\endgroup
+
+    	
+    \end{latin}
+\end{enumerate}
+
+\end{document}
+
