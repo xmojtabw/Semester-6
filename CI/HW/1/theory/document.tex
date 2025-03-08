@@ -1,0 +1,195 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{bytefield}
+\usepackage{forest}
+\usepackage{fancyhdr} % Custom headers/footers
+\usepackage{colortbl}
+\usepackage[left=0.6in, right=0.6in, top=1in, bottom=0.9in]{geometry}
+\usepackage{indentfirst}
+\usepackage{changepage, titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{adjustbox} % for adjustwidth
+\usepackage{multicol} % for side-by-side columns
+\setlength{\parindent}{1.5em} % Set indentation size (optional)
+\usepackage{amsmath} % Required for align environment
+\usepackage{xepersian}
+\settextfont{Vazirmatn FD}
+\setlatintextfont{Noto Serif} 
+
+
+\pagestyle{fancy}     % Enable fancy headers
+\fancyhf{}            % Clear default header/footer
+\renewcommand{\headrulewidth}{0pt} % Disable default header line
+
+\fancyhead[L]{\rule{\textwidth}{1pt}} % Manually add one line
+\fancyfoot[C]{\thepage} % Page number in the center of the footer
+
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+\definecolor{lightcyan}{rgb}{0.84,1,1}
+\definecolor{lightgreen}{rgb}{0.64,1,0.71}
+\definecolor{lightred}{rgb}{1,0.7,0.71}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\ReverseWords}{m}
+{
+	\seq_set_split:Nnn \l_tmpa_seq { ~ } { #1 } % Split words by spaces
+	\seq_reverse:N \l_tmpa_seq % Reverse the order of words
+	\seq_use:Nn \l_tmpa_seq { ~ } % Join words with spaces and output
+}
+\ExplSyntaxOff
+
+
+\begin{document}
+	\author{ مجتبی ملائی \\ ۴۰۱۳۱۳۸۳ }
+	\title{ \huge {\textbf{ تکلیف اول}}}
+	\date{}
+	\maketitle
+	
+\section{}
+\begin{enumerate}
+	\item 
+		اگر توابع فعال ساز را حذف کنیم، فرمول نهایی به شکل زیر خواهد بود:
+		
+		$$
+		\hat{y} = \sum_{j=1}^{4} ( \sum_{i=1}^{3} x_i w_{ij}^{(1)} + b_j^{(1)} )w_{i}^{(2)} + b_{j}^{(2)}
+		$$
+		که میتوان آن را به صورت زیر نوشت:
+		$$
+		\hat{y} = \sum_{j=1}^{4} ( \sum_{i=1}^{3} x_i w_{ij}^{(1)}w_{j}^{(2)} + b_j^{(1)}w_{j}^{(2)} ) + b_{j}^{(2)}
+		$$
+		$$
+		\hat{y} = \sum_{i=1}^{3} ( x_i ( \sum_{j=1}^{4}  w_{ij}^{(1)}w_{j}^{(2)}) + \sum_{j=1}^{4}(  b_j^{(1)}w_{j}^{(2)} )) + \sum_{j=1}^{4} b_{j}^{(2)}
+		$$
+		حالا اگر قرار دهیم:
+		$$
+		w'_i =  \sum_{j=1}^{4}  w_{ij}^{(1)}w_{j}^{(2)},
+		b' = \sum_{j=1}^{4}  b_j^{(1)}w_{j}^{(2)} + b_{j}^{(2)}
+		$$
+		خواهیم داشت:
+		$$
+		\hat{y} = \sum_{i=1}^{3} x_i w'_i + b' 
+		$$
+		که در واقع همان ساختار یک شبکه عصبی بدون لایه پنهان است.
+		
+		
+\item 
+
+	\begin{enumerate}[label=\textbf{\Alph*)}]
+		\item \( \frac{\partial \mathcal{L}}{\partial \hat{y}} =  -\frac{y}{\hat{y}} + \frac{(1-y)}{1-\hat{y}}  \)
+		
+		\item  \( \frac{\partial \hat{y}}{\partial z^{(2)}}= \sigma(z^{(2)}) (1-\sigma(z^{(2)})  ) = \hat{y}(1-\hat{y}) \)
+		
+		\item \( \frac{\partial a^{(1)}_j}{\partial z^{(1)}_j} =
+		 1-\tanh^2(z^{(1)}_j) = 1 - (a^{(1)}_j)^2 \)
+		
+		\item \(  \frac{\partial J}{\partial z^{(2)}} =
+		\frac{\partial J}{\partial \mathcal{L}} 
+				\frac{\partial \mathcal{L}}{\partial \hat{y}}
+				\frac{\partial \hat{y} }{ \partial z^{(2)}}
+				= \frac{1}{m} ( -\frac{y}{\hat{y}} + \frac{(1-y)}{1-\hat{y}})
+				\hat{y}(1-\hat{y}) = \frac{1}{m} ( \hat{y} -y )
+		\)
+		
+		\item \( \frac{\partial \mathcal{L}}{\partial w^{(1)}_{ij}} = \frac{\partial \mathcal{L}}{\partial  z^{(2)} }
+\frac{\partial z^{(2)} }{\partial a^{(1)}_j} 
+\frac{\partial a^{(1)}_j }{\partial z^{(1)}_j} 
+\frac{\partial z^{(1)}_j }{\partial w^{(1)}_{ij}} 
+= (\hat{y} - y ) (w^{(2)}_j) (1 - (a^{(1)}_j)^2) (x^{(1)}_i)
+\)
+		
+		\item \( \frac{\partial \mathcal{L}}{\partial b^{(1)}_{j}} = \frac{\partial \mathcal{L}}{\partial  z^{(2)} }
+		\frac{\partial z^{(2)} }{\partial a^{(1)}_j} 
+		\frac{\partial a^{(1)}_j }{\partial z^{(1)}_j} 
+		\frac{\partial z^{(1)}_j }{\partial b^{(1)}_{j}}
+		= (\hat{y} - y ) (w^{(2)}_j) (1 - (a^{(1)}_j)^2) 
+		\)
+		
+		\item \( \frac{\partial \mathcal{L}}{\partial w^{(2)}_j} = \frac{\partial \mathcal{L}}{\partial z^{(2)}}
+		\frac{\partial z^{(2)} }{\partial w^{(2)}_j} 
+		= (\hat{y} - y )a^{(1)}_j
+		\)
+		
+		\item \( \frac{\partial \mathcal{L}}{\partial b^{(2)} } = 
+		\frac{\partial \mathcal{L}}{\partial z^{(2)}}
+		\frac{\partial z^{(2)} }{\partial b^{(2)}} 
+		= \hat{y} - y 
+		\)
+	\end{enumerate}
+\vspace{3cm}
+\item 
+ ‎  
+\begin{latin}
+	\textbf{forward propagation:}
+	
+
+	$$z^{(1)}_j = [-0.1425,  0.1036,  0.7293, -0.1154] $$
+	$$a^{(1)}_j = [-0.14154322,  0.10323094,  0.62263691, -0.11489045]$$ 
+	$$ z^{(2)} = 0.31613438 $$
+	$$ \hat{y} = 0.57838188 $$
+	$$ \mathcal{L} = 0.54752093 , J = 0.54752093 $$
+	
+	\textbf{back-propagation:}
+	$$
+	\frac{\partial \mathcal{L}}{\partial w^{(2)}_j} =
+	\begin{bmatrix}
+			-0.05967719\\  0.04352403\\  0.262515  \\ -0.04843989
+	\end{bmatrix}
+	$$
+	$$
+	\frac{\partial \mathcal{L}}{\partial b^{(2)} } = f0.42161812
+	$$
+	$$ \frac{\partial \mathcal{L}}{\partial w^{(1)}_{ij}} =
+	\begin{bmatrix}
+		 0.02375734& -0.03357857&  0.00890675&  0.00478461 \\
+		 0.04648176& -0.0656972 &  0.01742624 & 0.00936119 \\
+		 0.06920618& -0.09781583&  0.02594574 & 0.01393777 
+	\end{bmatrix}
+	 $$
+	 $$
+	 \frac{\partial \mathcal{L}}{\partial b^{(1)}_{j}} = 
+	 \begin{bmatrix}
+	 	 0.1032928 \\ -0.14599378 \\  0.03872499\\  0.02080264
+	 \end{bmatrix}
+	 $$
+
+\end{latin}
+
+
+\end{enumerate}
+
+	
+	
+\end{document}
