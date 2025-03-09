@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.2.23)  8 MAR 2025 01:34
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.2.23)  9 MAR 2025 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -151,6 +151,25 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \label@box@height=\skip68
 \word@label@box=\box56
 )
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen150
+\captionmargin=\dimen151
+\caption@leftmargin=\dimen152
+\caption@rightmargin=\dimen153
+\caption@width=\dimen154
+\caption@indent=\dimen155
+\caption@parindent=\dimen156
+\caption@hangindent=\dimen157
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count273
+\c@continuedfloat=\count274
+Package caption Info: listings package is loaded.
+)
 (/usr/share/texmf-dist/tex/latex/forest/forest.sty
 Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
 
@@ -159,8 +178,8 @@ Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks21
-\pgfutil@tempdima=\dimen150
-\pgfutil@tempdimb=\dimen151
+\pgfutil@tempdima=\dimen158
+\pgfutil@tempdimb=\dimen159
 )
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box57
@@ -184,26 +203,26 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 x
 \pgfkeys@tmptoks=\toks24
 ))
-\pgf@x=\dimen152
-\pgf@y=\dimen153
-\pgf@xa=\dimen154
-\pgf@ya=\dimen155
-\pgf@xb=\dimen156
-\pgf@yb=\dimen157
-\pgf@xc=\dimen158
-\pgf@yc=\dimen159
-\pgf@xd=\dimen160
-\pgf@yd=\dimen161
+\pgf@x=\dimen160
+\pgf@y=\dimen161
+\pgf@xa=\dimen162
+\pgf@ya=\dimen163
+\pgf@xb=\dimen164
+\pgf@yb=\dimen165
+\pgf@xc=\dimen166
+\pgf@yc=\dimen167
+\pgf@xd=\dimen168
+\pgf@yd=\dimen169
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count273
-\c@pgf@countb=\count274
-\c@pgf@countc=\count275
-\c@pgf@countd=\count276
+\c@pgf@counta=\count275
+\c@pgf@countb=\count276
+\c@pgf@countc=\count277
+\c@pgf@countd=\count278
 \t@pgf@toka=\toks25
 \t@pgf@tokb=\toks26
 \t@pgf@tokc=\toks27
-\pgf@sys@id@count=\count277
+\pgf@sys@id@count=\count279
  (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -218,12 +237,12 @@ File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )
-\pgfsys@objnum=\count278
+\pgfsys@objnum=\count280
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count279
-\pgfsyssoftpath@bigbuffer@items=\count280
+\pgfsyssoftpath@smallbuffer@items=\count281
+\pgfsyssoftpath@bigbuffer@items=\count282
 )
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -234,8 +253,8 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen162
-\pgfmath@count=\count281
+\pgfmath@dimen=\dimen170
+\pgfmath@count=\count283
 \pgfmath@box=\box58
 \pgfmath@toks=\toks28
 \pgfmath@stack@operand=\toks29
@@ -253,52 +272,52 @@ x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
 .code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count282
+\c@pgfmathroundto@lastzeros=\count284
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen163
-\pgf@picmaxx=\dimen164
-\pgf@picminy=\dimen165
-\pgf@picmaxy=\dimen166
-\pgf@pathminx=\dimen167
-\pgf@pathmaxx=\dimen168
-\pgf@pathminy=\dimen169
-\pgf@pathmaxy=\dimen170
-\pgf@xx=\dimen171
-\pgf@xy=\dimen172
-\pgf@yx=\dimen173
-\pgf@yy=\dimen174
-\pgf@zx=\dimen175
-\pgf@zy=\dimen176
+\pgf@picminx=\dimen171
+\pgf@picmaxx=\dimen172
+\pgf@picminy=\dimen173
+\pgf@picmaxy=\dimen174
+\pgf@pathminx=\dimen175
+\pgf@pathmaxx=\dimen176
+\pgf@pathminy=\dimen177
+\pgf@pathmaxy=\dimen178
+\pgf@xx=\dimen179
+\pgf@xy=\dimen180
+\pgf@yx=\dimen181
+\pgf@yy=\dimen182
+\pgf@zx=\dimen183
+\pgf@zy=\dimen184
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen177
-\pgf@path@lasty=\dimen178
+\pgf@path@lastx=\dimen185
+\pgf@path@lasty=\dimen186
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen179
-\pgf@shorten@start@additional=\dimen180
+\pgf@shorten@end@additional=\dimen187
+\pgf@shorten@start@additional=\dimen188
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box59
 \pgf@hbox=\box60
 \pgf@layerbox@main=\box61
-\pgf@picture@serial@count=\count283
+\pgf@picture@serial@count=\count285
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen181
+\pgflinewidth=\dimen189
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
 ex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen182
-\pgf@pt@y=\dimen183
-\pgf@pt@temp=\dimen184
+\pgf@pt@x=\dimen190
+\pgf@pt@y=\dimen191
+\pgf@pt@temp=\dimen192
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -310,13 +329,13 @@ x
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen185
+\pgfarrowsep=\dimen193
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen186
-\pgf@sys@shading@range@num=\count284
-\pgf@shadingcount=\count285
+\pgf@max=\dimen194
+\pgf@sys@shading@range@num=\count286
+\pgf@shadingcount=\count287
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -345,8 +364,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen187
-\pgf@nodesepend=\dimen188
+\pgf@nodesepstart=\dimen195
+\pgf@nodesepend=\dimen196
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
@@ -358,8 +377,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen189
-\pgffor@skip=\dimen190
+\pgffor@iter=\dimen197
+\pgffor@skip=\dimen198
 \pgffor@stack=\toks31
 \pgffor@toks=\toks32
 ))
@@ -369,32 +388,32 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
 x
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count286
-\pgfplotmarksize=\dimen191
+\pgf@plot@mark@count=\count288
+\pgfplotmarksize=\dimen199
 )
-\tikz@lastx=\dimen192
-\tikz@lasty=\dimen193
-\tikz@lastxsaved=\dimen194
-\tikz@lastysaved=\dimen195
-\tikz@lastmovetox=\dimen196
-\tikz@lastmovetoy=\dimen197
-\tikzleveldistance=\dimen198
-\tikzsiblingdistance=\dimen199
+\tikz@lastx=\dimen256
+\tikz@lasty=\dimen257
+\tikz@lastxsaved=\dimen258
+\tikz@lastysaved=\dimen259
+\tikz@lastmovetox=\dimen260
+\tikz@lastmovetoy=\dimen261
+\tikzleveldistance=\dimen262
+\tikzsiblingdistance=\dimen263
 \tikz@figbox=\box64
 \tikz@figbox@bg=\box65
 \tikz@tempbox=\box66
 \tikz@tempbox@bg=\box67
-\tikztreelevel=\count287
-\tikznumberofchildren=\count288
-\tikznumberofcurrentchild=\count289
-\tikz@fig@count=\count290
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count291
-\pgfmatrixcurrentcolumn=\count292
-\pgf@matrix@numberofcolumns=\count293
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
 )
-\tikz@expandcount=\count294
+\tikz@expandcount=\count296
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
@@ -478,7 +497,7 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.t
 ex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-\pgf@intersect@solutions=\count295
+\pgf@intersect@solutions=\count297
 )
 (/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
@@ -487,7 +506,7 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 )
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count296
+\etb@tempcnta=\count298
 )
 (/usr/share/texmf-dist/tex/latex/elocalloc/elocalloc.sty
 Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
@@ -506,65 +525,65 @@ Package: expl3 2024-02-20 L3 programming layer (loader)
 
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
-\g__graphics_track_int=\count297
+\g__graphics_track_int=\count299
 \l__pdf_internal_box=\box88
-\g__pdf_backend_object_int=\count298
-\g__pdf_backend_annotation_int=\count299
-\g__pdf_backend_link_int=\count300
+\g__pdf_backend_object_int=\count300
+\g__pdf_backend_annotation_int=\count301
+\g__pdf_backend_link_int=\count302
 ))
 Package: xparse 2024-02-18 L3 Experimental document command parser
 )
 (/usr/share/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \ID@toks=\toks36
-\ID@count=\count301
+\ID@count=\count303
 )
 \ID@usercommands=\toks37
-\safeloop@depth=\count302
-\safeRKloop@depth=\count303
-\forest@temp@dimen=\dimen256
-\forest@temp@count=\count304
-\forest@n=\count305
-\forest@temp@global@count=\count306
+\safeloop@depth=\count304
+\safeRKloop@depth=\count305
+\forest@temp@dimen=\dimen264
+\forest@temp@count=\count306
+\forest@n=\count307
+\forest@temp@global@count=\count308
 \forest@temp@toks=\toks38
-\forest@temparray@M=\count307
-\forest@temparray@N=\count308
-\forest@global@temparray@M=\count309
-\forest@global@temparray@N=\count310
-\forest@isnum@count=\count311
-\forest@isdim@nonintpart=\count312
-\forest@isdim@dimen=\dimen257
-\forest@sort@m=\count313
-\forest@sort@k=\count314
-\forest@sort@p=\count315
+\forest@temparray@M=\count309
+\forest@temparray@N=\count310
+\forest@global@temparray@M=\count311
+\forest@global@temparray@N=\count312
+\forest@isnum@count=\count313
+\forest@isdim@nonintpart=\count314
+\forest@isdim@dimen=\dimen265
+\forest@sort@m=\count315
+\forest@sort@k=\count316
+\forest@sort@p=\count317
 \bracket@content=\toks39
 \bracket@afterthought=\toks40
-\forest@node@maxid=\count316
-\forest@process@left@M=\count317
-\forest@process@left@N=\count318
-\forest@process@right@M=\count319
-\forest@process@right@N=\count320
-\forest@process@saved@M=\count321
-\forest@process@saved@N=\count322
-\forest@process@result@M=\count323
-\forest@process@result@N=\count324
-\forest@process@n=\count325
+\forest@node@maxid=\count318
+\forest@process@left@M=\count319
+\forest@process@left@N=\count320
+\forest@process@right@M=\count321
+\forest@process@right@N=\count322
+\forest@process@saved@M=\count323
+\forest@process@saved@N=\count324
+\forest@process@result@M=\count325
+\forest@process@result@N=\count326
+\forest@process@n=\count327
 \forest@nodewalk@branch@toks=\toks41
 \forest@nodewalk@shortsteps@resolution=\toks42
 \forest@do@dynamics=\toks43
 \forest@box=\box89
-\forest@xg=\dimen258
-\forest@yg=\dimen259
-\forest@xs=\dimen260
-\forest@ys=\dimen261
+\forest@xg=\dimen266
+\forest@yg=\dimen267
+\forest@xs=\dimen268
+\forest@ys=\dimen269
 \forest@pi@toks=\toks44
 \forest@segment@toks=\toks45
 \forest@PIi@toks=\toks46
 \forest@PIii@toks=\toks47
 \forest@copy@in=\read3
 \forest@copy@out=\write4
-\forest@externalize@max@outer@n=\count326
-\forest@externalize@inner@n=\count327
+\forest@externalize@max@outer@n=\count328
+\forest@externalize@inner@n=\count329
 )
 (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
@@ -584,9 +603,9 @@ Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
 
 (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen262
+\col@sep=\dimen270
 \ar@mcellbox=\box90
-\extrarowheight=\dimen263
+\extrarowheight=\dimen271
 \NC@list=\toks48
 \extratabsurround=\skip78
 \backup@length=\skip79
@@ -594,7 +613,7 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 )
 \everycr=\toks49
 \minrowclearance=\skip80
-\rownum=\count328
+\rownum=\count330
 )
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -605,17 +624,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count329
-\Gm@cntv=\count330
-\c@Gm@tempcnt=\count331
-\Gm@bindingoffset=\dimen264
-\Gm@wd@mp=\dimen265
-\Gm@odd@mp=\dimen266
-\Gm@even@mp=\dimen267
-\Gm@layoutwidth=\dimen268
-\Gm@layoutheight=\dimen269
-\Gm@layouthoffset=\dimen270
-\Gm@layoutvoffset=\dimen271
+\Gm@cnth=\count331
+\Gm@cntv=\count332
+\c@Gm@tempcnt=\count333
+\Gm@bindingoffset=\dimen272
+\Gm@wd@mp=\dimen273
+\Gm@odd@mp=\dimen274
+\Gm@even@mp=\dimen275
+\Gm@layoutwidth=\dimen276
+\Gm@layoutheight=\dimen277
+\Gm@layouthoffset=\dimen278
+\Gm@layoutvoffset=\dimen279
 \Gm@dimlist=\toks50
 )
 (/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
@@ -623,40 +642,40 @@ Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
 (/usr/share/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count332
-\cp@tempcnt=\count333
+\c@cp@cntr=\count334
+\cp@tempcnt=\count335
 )
 (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box92
 \beforetitleunit=\skip81
 \aftertitleunit=\skip82
-\ttl@plus=\dimen272
-\ttl@minus=\dimen273
+\ttl@plus=\dimen280
+\ttl@minus=\dimen281
 \ttl@toksa=\toks51
-\titlewidth=\dimen274
-\titlewidthlast=\dimen275
-\titlewidthfirst=\dimen276
+\titlewidth=\dimen282
+\titlewidthlast=\dimen283
+\titlewidthfirst=\dimen284
 )
 (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen277
-\lightrulewidth=\dimen278
-\cmidrulewidth=\dimen279
-\belowrulesep=\dimen280
-\belowbottomsep=\dimen281
-\aboverulesep=\dimen282
-\abovetopsep=\dimen283
-\cmidrulesep=\dimen284
-\cmidrulekern=\dimen285
-\defaultaddspace=\dimen286
-\@cmidla=\count334
-\@cmidlb=\count335
-\@aboverulesep=\dimen287
-\@belowrulesep=\dimen288
-\@thisruleclass=\count336
-\@lastruleclass=\count337
-\@thisrulewidth=\dimen289
+\heavyrulewidth=\dimen285
+\lightrulewidth=\dimen286
+\cmidrulewidth=\dimen287
+\belowrulesep=\dimen288
+\belowbottomsep=\dimen289
+\aboverulesep=\dimen290
+\abovetopsep=\dimen291
+\cmidrulesep=\dimen292
+\cmidrulekern=\dimen293
+\defaultaddspace=\dimen294
+\@cmidla=\count336
+\@cmidlb=\count337
+\@aboverulesep=\dimen295
+\@belowrulesep=\dimen296
+\@thisruleclass=\count338
+\@lastruleclass=\count339
+\@thisrulewidth=\dimen297
 )
 (/usr/share/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
@@ -669,7 +688,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks52
 \XKV@tempa@toks=\toks53
 )
-\XKV@depth=\count338
+\XKV@depth=\count340
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -683,56 +702,56 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box93
 )
-\tc@llx=\dimen290
-\tc@lly=\dimen291
-\tc@urx=\dimen292
-\tc@ury=\dimen293
+\tc@llx=\dimen298
+\tc@lly=\dimen299
+\tc@urx=\dimen300
+\tc@ury=\dimen301
 Package trimclip Info: Using driver 'tc-xetex.def'.
 
 (/usr/share/texmf-dist/tex/latex/adjustbox/tc-xetex.def
 File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
-\adjbox@Width=\dimen294
-\adjbox@Height=\dimen295
-\adjbox@Depth=\dimen296
-\adjbox@Totalheight=\dimen297
-\adjbox@pwidth=\dimen298
-\adjbox@pheight=\dimen299
-\adjbox@pdepth=\dimen300
-\adjbox@ptotalheight=\dimen301
+\adjbox@Width=\dimen302
+\adjbox@Height=\dimen303
+\adjbox@Depth=\dimen304
+\adjbox@Totalheight=\dimen305
+\adjbox@pwidth=\dimen306
+\adjbox@pheight=\dimen307
+\adjbox@pdepth=\dimen308
+\adjbox@ptotalheight=\dimen309
 
 (/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count339
+\c@checkoddpage=\count341
 LaTeX Info: Redefining \checkoddpage on input line 45.
 )
 (/usr/share/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box94
-\sift@deathcycles=\count340
-\@vwid@loff=\dimen302
-\@vwid@roff=\dimen303
+\sift@deathcycles=\count342
+\@vwid@loff=\dimen310
+\@vwid@roff=\dimen311
 ))
 (/usr/share/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count341
+\c@tracingmulticols=\count343
 \mult@box=\box95
-\multicol@leftmargin=\dimen304
-\c@unbalance=\count342
-\c@collectmore=\count343
-\doublecol@number=\count344
-\multicoltolerance=\count345
-\multicolpretolerance=\count346
-\full@width=\dimen305
-\page@free=\dimen306
-\premulticols=\dimen307
-\postmulticols=\dimen308
+\multicol@leftmargin=\dimen312
+\c@unbalance=\count344
+\c@collectmore=\count345
+\doublecol@number=\count346
+\multicoltolerance=\count347
+\multicolpretolerance=\count348
+\full@width=\dimen313
+\page@free=\dimen314
+\premulticols=\dimen315
+\postmulticols=\dimen316
 \multicolsep=\skip83
 \multicolbaselineskip=\skip84
 \partial@page=\box96
 \last@line=\box97
 \mc@boxedresult=\box98
-\maxbalancingoverflow=\dimen309
+\maxbalancingoverflow=\dimen317
 \mult@rightbox=\box99
 \mult@grightbox=\box100
 \mult@firstbox=\box101
@@ -773,15 +792,15 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box136
 \@tempa=\box137
 \@tempa=\box138
-\c@minrows=\count347
-\c@columnbadness=\count348
-\c@finalcolumnbadness=\count349
-\last@try=\dimen310
-\multicolovershoot=\dimen311
-\multicolundershoot=\dimen312
+\c@minrows=\count349
+\c@columnbadness=\count350
+\c@finalcolumnbadness=\count351
+\last@try=\dimen318
+\multicolovershoot=\dimen319
+\multicolundershoot=\dimen320
 \mult@nat@firstbox=\box139
 \colbreak@box=\box140
-\mc@col@check@num=\count350
+\mc@col@check@num=\count352
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
@@ -794,23 +813,23 @@ Package: amstext 2021/08/26 v2.01 AMS text
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks54
-\ex@=\dimen313
+\ex@=\dimen321
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen314
+\pmbraise@=\dimen322
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count351
+\inf@bad=\count353
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count352
-\leftroot@=\count353
+\uproot@=\count354
+\leftroot@=\count355
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count354
-\DOTSCASE@=\count355
+\classnum@=\count356
+\DOTSCASE@=\count357
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -820,30 +839,30 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen315
+\big@size=\dimen323
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count356
+\macc@depth=\count358
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count357
+\c@MaxMatrixCols=\count359
 \dotsspace@=\muskip16
-\c@parentequation=\count358
-\dspbrk@lvl=\count359
+\c@parentequation=\count360
+\dspbrk@lvl=\count361
 \tag@help=\toks55
-\row@=\count360
-\column@=\count361
-\maxfields@=\count362
+\row@=\count362
+\column@=\count363
+\maxfields@=\count364
 \andhelp@=\toks56
-\eqnshift@=\dimen316
-\alignsep@=\dimen317
-\tagshift@=\dimen318
-\tagwidth@=\dimen319
-\totwidth@=\dimen320
-\lineht@=\dimen321
+\eqnshift@=\dimen324
+\alignsep@=\dimen325
+\tagshift@=\dimen326
+\tagwidth@=\dimen327
+\totwidth@=\dimen328
+\lineht@=\dimen329
 \@envbody=\toks57
 \multlinegap=\skip86
 \multlinetaggap=\skip87
@@ -861,20 +880,20 @@ Package: fontspec 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTeX
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2024/02/13 v2.9a Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count363
-\l__fontspec_language_int=\count364
-\l__fontspec_strnum_int=\count365
-\l__fontspec_tmp_int=\count366
-\l__fontspec_tmpa_int=\count367
-\l__fontspec_tmpb_int=\count368
-\l__fontspec_tmpc_int=\count369
-\l__fontspec_em_int=\count370
-\l__fontspec_emdef_int=\count371
-\l__fontspec_strong_int=\count372
-\l__fontspec_strongdef_int=\count373
-\l__fontspec_tmpa_dim=\dimen322
-\l__fontspec_tmpb_dim=\dimen323
-\l__fontspec_tmpc_dim=\dimen324
+\l__fontspec_script_int=\count365
+\l__fontspec_language_int=\count366
+\l__fontspec_strnum_int=\count367
+\l__fontspec_tmp_int=\count368
+\l__fontspec_tmpa_int=\count369
+\l__fontspec_tmpb_int=\count370
+\l__fontspec_tmpc_int=\count371
+\l__fontspec_em_int=\count372
+\l__fontspec_emdef_int=\count373
+\l__fontspec_strong_int=\count374
+\l__fontspec_strongdef_int=\count375
+\l__fontspec_tmpa_dim=\dimen330
+\l__fontspec_tmpb_dim=\dimen331
+\l__fontspec_tmpc_dim=\dimen332
 
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -882,43 +901,43 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 (/usr/share/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal.sty
 Package: xepersian-persiancal 2012/07/25 v0.2 provides Persian calendar
-\XePersian@i=\count374
-\XePersian@y=\count375
-\XePersian@m=\count376
-\XePersian@d=\count377
-\XePersian@latini=\count378
-\XePersian@persiani=\count379
-\XePersian@latinii=\count380
-\XePersian@persianii=\count381
-\XePersian@latiniii=\count382
-\XePersian@persianiii=\count383
-\XePersian@latiniv=\count384
-\XePersian@persianiv=\count385
-\XePersian@latinv=\count386
-\XePersian@persianv=\count387
-\XePersian@latinvi=\count388
-\XePersian@persianvi=\count389
-\XePersian@latinvii=\count390
-\XePersian@persianvii=\count391
-\XePersian@latinviii=\count392
-\XePersian@persianviii=\count393
-\XePersian@latinix=\count394
-\XePersian@persianix=\count395
-\XePersian@latinx=\count396
-\XePersian@persianx=\count397
-\XePersian@latinxi=\count398
-\XePersian@persianxi=\count399
-\XePersian@latinxii=\count400
-\XePersian@persianxii=\count401
-\XePersian@persianxiii=\count402
-\XePersian@temp=\count403
-\XePersian@temptwo=\count404
-\XePersian@tempthree=\count405
-\XePersian@yModHundred=\count406
-\XePersian@thirtytwo=\count407
-\XePersian@dn=\count408
-\XePersian@sn=\count409
-\XePersian@mminusone=\count410
+\XePersian@i=\count376
+\XePersian@y=\count377
+\XePersian@m=\count378
+\XePersian@d=\count379
+\XePersian@latini=\count380
+\XePersian@persiani=\count381
+\XePersian@latinii=\count382
+\XePersian@persianii=\count383
+\XePersian@latiniii=\count384
+\XePersian@persianiii=\count385
+\XePersian@latiniv=\count386
+\XePersian@persianiv=\count387
+\XePersian@latinv=\count388
+\XePersian@persianv=\count389
+\XePersian@latinvi=\count390
+\XePersian@persianvi=\count391
+\XePersian@latinvii=\count392
+\XePersian@persianvii=\count393
+\XePersian@latinviii=\count394
+\XePersian@persianviii=\count395
+\XePersian@latinix=\count396
+\XePersian@persianix=\count397
+\XePersian@latinx=\count398
+\XePersian@persianx=\count399
+\XePersian@latinxi=\count400
+\XePersian@persianxi=\count401
+\XePersian@latinxii=\count402
+\XePersian@persianxii=\count403
+\XePersian@persianxiii=\count404
+\XePersian@temp=\count405
+\XePersian@temptwo=\count406
+\XePersian@tempthree=\count407
+\XePersian@yModHundred=\count408
+\XePersian@thirtytwo=\count409
+\XePersian@dn=\count410
+\XePersian@sn=\count411
+\XePersian@mminusone=\count412
 )
 (/usr/share/texmf-dist/tex/xelatex/xepersian/xepersian-mathdigitspec.sty
 Package: xepersian-mathdigitspec 2022/05/20 v1.2.0 Unicode Persian math digits 
@@ -959,17 +978,17 @@ etting in plain TeX and LaTeX
 Package: biditools 2022/06/15 v2.3 Programming tools for bidi package
 \@bidi@envbody=\toks59
 \@bidi@emptytoks=\toks60
-\bidi@poscount=\count411
-\bidi@tempcountb=\count412
+\bidi@poscount=\count413
+\bidi@tempcountb=\count414
 \bidi@temptoksa=\toks61
 \bidi@temptoksb=\toks62
-\bidi@dummies=\count413
+\bidi@dummies=\count415
 \bidi@are@these@correct=\toks63
 \bidi@toks@lista=\toks64
 \bidi@toks@listb=\toks65
-\bidi@stack@length=\count414
+\bidi@stack@length=\count416
 \bidi@empty@stack=\toks66
-\bidi@looprepeat@depth=\count415
+\bidi@looprepeat@depth=\count417
 )
 (/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
@@ -1006,7 +1025,7 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count416
+\c@abspage=\count418
 Package zref Info: New property: abspage on input line 67.
 )
 \@bidi@copyins@=\insert252
@@ -1015,12 +1034,12 @@ Package zref Info: New property: abspage on input line 67.
 File: latex-xetex-bidi.def 2022/07/04 v1.4.9 bidi adaptations for `latex.ltx' f
 or XeTeX engine
 \bidi@n@everypar=\toks67
-\bidi@column@check@number=\count417
+\bidi@column@check@number=\count419
 
 (/usr/share/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2023/01/18 v1.2 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count418
+\c@footdir@label=\count420
 \footdir@toks=\toks68
 )
 (/usr/share/texmf-dist/tex/xelatex/bidi/article-xetex-bidi.def
@@ -1034,6 +1053,14 @@ ge for XeTeX engine
 (/usr/share/texmf-dist/tex/xelatex/bidi/amstext-xetex-bidi.def
 File: amstext-xetex-bidi.def 2016/09/12 v0.2 bidi adaptations for amstext packa
 ge for XeTeX engine
+)
+(/usr/share/texmf-dist/tex/xelatex/bidi/caption-xetex-bidi.def
+File: caption-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for caption packa
+ge for XeTeX engine
+)
+(/usr/share/texmf-dist/tex/xelatex/bidi/caption3-xetex-bidi.def
+File: caption3-xetex-bidi.def 2013/04/01 v0.1 bidi adaptations for caption3 pac
+kage for XeTeX engine
 )
 (/usr/share/texmf-dist/tex/xelatex/bidi/color-xetex-bidi.def
 File: color-xetex-bidi.def 2013/04/08 v0.2 bidi adaptations for color package f
@@ -1094,7 +1121,7 @@ r XeTeX engine
 File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
  last package loaded
 )
-\bidi@digits=\count419
+\bidi@digits=\count421
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
@@ -1123,9 +1150,9 @@ File: loadingorder-xetex-bidi.def 2017/12/29 v0.97 making sure that bidi is the
 * Primary author of xepersian package: Vafa Khalighi.
 * 
 ****************************************************
-\xepersian@tcl=\count420
-\xepersian@ilg=\dimen325
-\xepersian@strutilg=\dimen326
+\xepersian@tcl=\count422
+\xepersian@ilg=\dimen333
+\xepersian@strutilg=\dimen334
 (/usr/share/texmf-dist/tex/xelatex/xepersian/loadingorder-xepersian.def
 File: loadingorder-xepersian.def 2018/09/29 v0.5 making sure that xepersian is 
 the last package loaded
@@ -1258,33 +1285,38 @@ ext;"
 (fontspec)             Serif/BI/OT:script=latn;language=dflt;+smcp;mapping=tex-
 text;"
 
-LaTeX Info: Redefining \latinfont on input line 23.
+LaTeX Info: Redefining \latinfont on input line 24.
 
 (./document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7
-5.
+6.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-\c@lstlisting=\count421
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+\c@lstlisting=\count423
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen335
+\caption@adjustwidth@linewidth=\dimen336
+Package caption Info: End \AtBeginDocument code.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1320,31 +1352,31 @@ LaTeX Font Info:    ... okay on input line 75.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-] [2] (./document.aux)
+] [2] [3] (./document.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 32173 strings out of 476251
- 763474 string characters out of 5790139
- 1936839 words of memory out of 5000000
- 53673 multiletter control sequences out of 15000+600000
+ 33509 strings out of 476251
+ 789616 string characters out of 5790139
+ 1942839 words of memory out of 5000000
+ 54997 multiletter control sequences out of 15000+600000
  564717 words of font info for 100 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
- 98i,12n,101p,2405b,327s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,12n,101p,2405b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (2 pages).
+Output written on document.pdf (3 pages).
