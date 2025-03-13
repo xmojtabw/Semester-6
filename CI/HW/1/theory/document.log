@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.3.10)  10 MAR 2025 10:35
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.3.10)  13 MAR 2025 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1370,7 +1370,7 @@ File: screenshot001.png Graphic file (type bmp)
  [3]
 File: screenshot002.png Graphic file (type bmp)
 <screenshot002.png>
- [4]
+ [4] [5]
 (./document.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1386,4 +1386,4 @@ Here is how much of TeX's memory you used:
  286 hyphenation exceptions out of 8191
  98i,12n,101p,2405b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (4 pages).
+Output written on document.pdf (5 pages).
