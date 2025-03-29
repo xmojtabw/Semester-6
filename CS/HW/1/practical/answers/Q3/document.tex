@@ -1,0 +1,201 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{bytefield}
+\usepackage{forest}
+\usepackage{float}
+\usepackage{fancyhdr} % Custom headers/footers
+\usepackage{colortbl}
+\usepackage[left=0.6in, right=0.6in, top=1in, bottom=0.9in]{geometry}
+\usepackage{indentfirst}
+\usepackage{changepage, titlesec}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{adjustbox} % for adjustwidth
+\usepackage{multicol} % for side-by-side columns
+\setlength{\parindent}{1.5em} % Set indentation size (optional)
+\usepackage{amsmath} % Required for align environment
+\usepackage{xepersian}
+\settextfont{Vazirmatn FD}
+\setlatintextfont{Noto Serif} 
+
+
+\pagestyle{fancy}     % Enable fancy headers
+\fancyhf{}            % Clear default header/footer
+\renewcommand{\headrulewidth}{0pt} % Disable default header line
+
+\fancyhead[L]{\rule{\textwidth}{1pt}} % Manually add one line
+\fancyfoot[C]{\thepage} % Page number in the center of the footer
+
+\newcommand{\colorbitbox}[3]{%
+	\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+	\bitbox{#2}{#3}}
+\definecolor{lightcyan}{rgb}{0.84,1,1}
+\definecolor{lightgreen}{rgb}{0.64,1,0.71}
+\definecolor{lightred}{rgb}{1,0.7,0.71}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\ReverseWords}{m}
+{
+	\seq_set_split:Nnn \l_tmpa_seq { ~ } { #1 } % Split words by spaces
+	\seq_reverse:N \l_tmpa_seq % Reverse the order of words
+	\seq_use:Nn \l_tmpa_seq { ~ } % Join words with spaces and output
+}
+\ExplSyntaxOff
+
+
+\begin{document}
+	\author{ مجتبی ملائی \\ ۴۰۱۳۱۳۸۳ 
+		\and 
+		رسول صالحی \\ ۴۰۱۲۵۹۳۳
+	}
+	\title{ \huge { تکلیف عملی اول}}
+	\date{}
+	\maketitle
+	
+	\section{سوال سوم}	
+	\begin{enumerate}[label=\textbf{\Alph*)}]
+		\item 
+	\textbf{	بررسی :A}
+		ابتدا به آن ورودی \texttt{aaaa} را دادیم.
+
+\begin{latin}
+	\begin{lstlisting}[language=Bash]
+./A aaaa
+Encrypted (hex): 61 4b 61 4b
+\end{lstlisting}
+\end{latin}	
+سپس ورودی \texttt{baaa} را امتحان کردیم.
+
+\begin{latin}
+	\begin{lstlisting}[language=Bash]
+./A baaa
+Encrypted (hex): 62 48 62 48 
+\end{lstlisting}
+\end{latin}	
+
+و نهایتا ورودی \texttt{aaab} را امتحان کردیم.
+
+\begin{latin}
+	\begin{lstlisting}[language=Bash]
+./A aaab
+Encrypted (hex): 61 4b 61 48 
+\end{lstlisting}
+\end{latin}	
+
+این موضوع نشان می‌دهد که بلاک اول تاثیر مستقیمی بر روی بلاک های بعدی دارد. پس ECB نیست. همچنین تغییر بلاک آخر ورودی فقط باعث تغییر در بلاک آخر رمز شده است. اگر CTR باشد، چون IV ثابت است، اگر $P_0$ را تغییر دهیم، فقط $C_0$ باید تغییر کند اما همه بلاک های بعد از آن نیز تغییر کرده اند. پس فقط میتواند \textbf{CBC} باشد. زیرا در CBC تغییر هر بلاک باعث تغییر در بلاک های بعدی می‌شود. اما در دیگر مود ها اینگونه نیست. 
+
+
+ 
+\textbf{طول بلاک:} 
+همانطور که دیدیم، با تغییر آخرین حرف ورودی، ۸ بیت آخر خروجی فقط تغییر کرد. پس طول هر بلاک ۸ بیت است.
+
+
+
+		\item 
+\textbf{	بررسی :B}
+ابتدا به آن ورودی \texttt{aaaa} را دادیم.
+\begin{latin}
+\begin{lstlisting}[language=Bash]
+./B aaaa
+Encrypted (hex): e5 e4 e7 e6 
+\end{lstlisting}
+\end{latin}
+سپس دوباره همان ورودی را امتحان کردیم.
+
+\begin{latin}
+	\begin{lstlisting}[language=Bash]
+./B aaaa
+Encrypted (hex): ca cb c8 c9 
+\end{lstlisting}
+\end{latin}
+و نهایتا ورودی \texttt{aaab} را امتحان کردیم.
+
+\begin{latin}
+\begin{lstlisting}[language=Bash]
+./B aaab
+Encrypted (hex): 62 63 60 62  
+\end{lstlisting}
+\end{latin}
+این موضوع نشان میدهد. حتی با ورودی ثابت هم خروجی کاملا متفاوت است. پس ECB نیست. در نتیجه فقط می‌تواند \textbf{CTR} باشد. چون هر بار IV  متفاوت است، خروجی نیز کاملا متفاوت می باشد. 
+
+\textbf{طول بلاک:} 
+از آنجایی که طول متن رمز با طول ورودی همواره یکسان است، پس طول هر بلاک آن به اندازه یک حرف یا ۸ بیت است.
+
+
+\item 
+\textbf{بررسی :C}
+
+اتبدابه آن ورودی \texttt{aaaa} را دادیم.
+
+\begin{latin}
+\begin{lstlisting}[language=Bash]
+./C aaaa
+Encrypted (hex): 31 31 31 31
+\end{lstlisting}
+\end{latin}	
+سپس ورودی \texttt{baaa} را امتحان کردیم.
+
+\begin{latin}
+	\begin{lstlisting}[language=Bash]
+./C baaa
+Encrypted (hex): 32 31 31 31 
+\end{lstlisting}
+\end{latin}	
+
+و نهایتا ورودی \texttt{aaab} را امتحان کردیم.
+
+\begin{latin}
+	\begin{lstlisting}[language=Bash]
+./C aaab
+Encrypted (hex): 31 31 31 32
+	\end{lstlisting}
+\end{latin}	
+ واضح است که اگر هر بلاک ورودی را تغییر دهیم، همان بلاک در خروجی نغییر می‌کند. همچنین خروجی آن همیشه به ازای ورودی یکسان ثابت است یعنی  به IV ربطی ندارد. پس فقط میتواند ECB باشد. 
+ 
+\textbf{طول بلاک:} 
+از آنجایی که طول متن رمز با طول ورودی همواره یکسان است، پس طول هر بلاک آن به اندازه یک حرف یا ۸ بیت است.
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+	
+\end{document}
