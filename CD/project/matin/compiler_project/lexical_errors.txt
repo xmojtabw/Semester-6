@@ -1,0 +1,6 @@
+3.	(23apple, Invalid number)
+6.	(#, Invalid input)
+10.	([, Invalid input)
+10.	(2milk, Invalid number)
+10.	(], Invalid input)
+11.	(#, Invalid input)

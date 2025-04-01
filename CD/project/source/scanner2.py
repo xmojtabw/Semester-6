@@ -18,16 +18,16 @@ def writefile(name:str,lines,empty_message):
         if empty:
             f.write(empty_message)
 
-INVALID_INPUT = re.compile(r"(a-z|A-Z|!|=|&|\||\*|\-|\+|\\|<|>|/|\(|\)|{|}|\[|\]|;|,)*[~^`'\"\.@#\$%\\]|[a-zA-Z0-9]+!(?!=)|!(?!\s*[a-zA-Z0-9(=-])|! (?!\s*[a-zA-Z0-9(-])|/(?!\s*[a-zA-Z0-9\(-])") 
-ID = re.compile(r"[A-Za-z][A-Za-z0-9]*")
-NUM = re.compile(r"[0-9]+")
+INVALID_INPUT = re.compile(r"(a-z|A-Z|!|=|&|\||\*|\-|\+|<|>|/|\(|\)|{|}|\[|\]|;|,)*[~^`'\"\.@#\$%\\]|[a-zA-Z0-9]+!(?!=)|!(?!\s*[a-zA-Z0-9(=-])|! (?!\s*[a-zA-Z0-9(-])|/(?!\s*[a-zA-Z0-9\(-])") 
+ID = re.compile(r"[A-Za-z][A-Za-z0-9]*(?![a-zA-Z0-9])]")
+NUM = re.compile(r"[0-9]+(?![a-zA-Z0-9])]")
 INVALID_NUM = re.compile(r"[0-9]+[A-Za-z@#\$%\\]")
 KEYWORD = re.compile(r"(int|void|if|else|while|return|repeat|until|break|bool|true|false|void)(?=[ \(\),])") 
 SYMBOL = re.compile(r"(!|!=|==|=|&&|\|\||\*|\-|\+|<=|>=|<|>|/|\(|\)|{|}|\[|\]|;|,)")
 UNCLOSED_COMMENT = re.compile(r"/\*")
 UNOPENED_COMMENT = re.compile(r"\*/")
 STUPID_INVALID_INPUT = re.compile(r"")
-KEYWORDS =set( 'int bool void true false if else while until repeat break return'.split(' ') )
+KEYWORDS = 'int bool void true false if else while until repeat break return'.split(' ') 
 # class InputText() : 
 #     input_pos = 0
 #     def __init__(self,file_name:str):
@@ -59,16 +59,14 @@ def preprocess(code:str) -> list:
     OTHER_WHITESPACE = r"[\r\t\v\f]"
     code = re.sub(OTHER_WHITESPACE, " ", code)
 
-    # Split the code into lines
+    return code
+
+
+
+def process_invalid(code:str):
     lines = code.split("\n")
-    return lines
 
-
-def process(line :str):
-    end = False
-    line_symbols = set()
-    def process_invalid_tokens(tokens):
-        nonlocal line ,end
+    def process_invalid_tokens(line,tokens):
         output = []
         for token in tokens:
             t = token.group(0)
@@ -77,7 +75,6 @@ def process(line :str):
             if UNCLOSED_COMMENT.match(t):
                 e = len(line) # remove whatever comes after \* 
                 output.append((f"({line[s:s+m]}, Unclosed comment)",s))
-                end = True
             elif UNOPENED_COMMENT.match(t):
                 output.append((f"({line[max(s-m,0):s+2]}, Unopened comment)",s))
             elif INVALID_INPUT.match(t):
@@ -87,80 +84,89 @@ def process(line :str):
             line = line[:s] + " " * (e-s) + line[e:]
         return output
 
-    def find_invalid():
-        nonlocal line
+    def find_invalid(line):
         output = []
         unclosed_comments = list(UNCLOSED_COMMENT.finditer(line))
-        output += process_invalid_tokens(unclosed_comments)
+        output += process_invalid_tokens(line,unclosed_comments)
         unopened_comments =list(UNOPENED_COMMENT.finditer(line))
-        output += process_invalid_tokens(unopened_comments)
+        output += process_invalid_tokens(line,unopened_comments)
         invalid_inputs = list(INVALID_INPUT.finditer(line))
-        output += process_invalid_tokens(invalid_inputs)
+        output += process_invalid_tokens(line,invalid_inputs)
         invalid_nums = list(INVALID_NUM.finditer(line)) 
-        output += process_invalid_tokens(invalid_nums)
+        output += process_invalid_tokens(line,invalid_nums)
         output.sort(key = lambda x : x[1])
         return output
     
-    def process_valid_tokens(tokens):
-        nonlocal line
-        output = []
-        for token in tokens:
-            t = token.group(0)
-            s,e = token.start(), token.end()
-            if SYMBOL.match(t):
-                output.append((f"(SYMBOL, {t})",s))
-            elif KEYWORD.match(t+' '):
-                output.append((f"(KEYWORD, {t})",s))
-            elif ID.match(t):
-                output.append((f"(ID, {t})",s) )
-            elif NUM.match(t):
-                output.append((f"(NUM, {t})",s))
-            line = line[:s] + " " * (e-s) + line[e:]
-        return output
+    errors = []
+    for line in lines:
+        errors.append(' '.join([x[0] for x in find_invalid(line)]))
+    return errors
 
 
-    def find_tokens():
-        nonlocal line ,line_symbols
-        output = []
-        symbols = list(SYMBOL.finditer(line))
-        output += process_valid_tokens(symbols)
-        keywords =list(KEYWORD.finditer(line))
-        output += process_valid_tokens(keywords)
-        ids = list(ID.finditer(line))
-        output += process_valid_tokens(ids)
-        line_symbols.update([x.group(0) for x in ids])
+def getNextToken(code):
+    pos = 0
+    line_number = 1
+    def getchar():
+        nonlocal pos
+        if pos == len(code):
+            return None
+        c = code[pos]
+        pos += 1
+        return  c 
+        
+    t=""
+    while True:
+        if SYMBOL.match(t):
+            if t in ('!','='):
+                n = getchar()
+                if n == '=':
+                    yield f"(SYMBOL, {t+n})" , line_number
+                    t=""
+                else :
+                    pos -= 1 
+            yield f"(SYMBOL, {t})"
+        elif KEYWORD.match(t):
+            yield f"(KEYWORD, {t})" , line_number
+            t=""
+        elif ID.match(t):
+            yield f"(ID, {t})" ,line_number
+            t=""
+        elif NUM.match(t):
+            yield f"(NUM, {t})" , line_number
+            t=""
+        c = getchar()
+        if not c :
+            yield 'FIN' , line_number
+            return
+        elif c=='\n':
+            t+= ' '
+            line_number +=1 
+        else :
+            t+= c
 
-        nums = list(NUM.finditer(line)) 
-        output += process_valid_tokens(nums)
-        output.sort(key = lambda x : x[1])
-        return output
-
-    errors = ' '.join([x[0] for x in find_invalid()])
-    tokens = ' '.join([x[0] for x in find_tokens()])
-    return errors,tokens,line_symbols,end
 
 
 if __name__ == '__main__' :
     code = getfile()
-    lines = preprocess(code)
+    code = preprocess(code)
 
-    errors = []
+    errors = process_invalid(code)
     tokens = []
     symbols = KEYWORDS
-    for i,line in enumerate(lines,start=1):
-        line_errors, line_tokens, line_symbols, end = process(line) 
-        errors += [line_errors]
-        tokens += [line_tokens]
-        symbols.update(line_symbols)
-        if end :
+    line_number = 0
+    getToken = getNextToken(code)
+    while True :
+        token , ln= next(getToken) 
+        if token == 'FIN':
             break
-        
-
-
-
+        if line_number != ln :
+            tokens.append(token+' ')
+            line_number +=1 
+        else :
+            tokens[line_number]+=tokens+' '
+    
     writefile('lexical_errors.txt',errors,'There is no lexical error.')
     writefile('tokens.txt',tokens,'There is no token')
-    writefile('symbol_table.txt',symbols,'')
 
 
 

@@ -1,4 +1,4 @@
 int main()
 { 
-	int cd!e = 7;
+	int a = !0 ;
 }
