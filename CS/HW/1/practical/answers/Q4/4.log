@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.3.10)  29 MAR 2025 23:15
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.3.12)  1 APR 2025 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1553,6 +1553,17 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
  [1
 
 ]
+
+LaTeX Warning: File `output_6_1.png' not found on input line 515.
+
+! Unable to load picture or PDF file 'output_6_1.png'.
+<to be read again> 
+                   }
+l.515 ...ewidth}{0.9\paperheight}}{output_6_1.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
 File: output_6_1.png Graphic file (type bmp)
 <output_6_1.png>
 
@@ -1560,7 +1571,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 517--518
 [][]
  []
 
-[2]
+
+LaTeX Warning: File `output_8_0.png' not found on input line 557.
+
+! Unable to load picture or PDF file 'output_8_0.png'.
+<to be read again> 
+                   }
+l.557 ...ewidth}{0.9\paperheight}}{output_8_0.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
 File: output_8_0.png Graphic file (type bmp)
 <output_8_0.png>
 
@@ -1568,7 +1589,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 559--560
 [][]
  []
 
-[3]
+[2]
+
+LaTeX Warning: File `output_10_0.png' not found on input line 595.
+
+! Unable to load picture or PDF file 'output_10_0.png'.
+<to be read again> 
+                   }
+l.595 ...width}{0.9\paperheight}}{output_10_0.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
 File: output_10_0.png Graphic file (type bmp)
 <output_10_0.png>
 
@@ -1577,14 +1609,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 597--598
  []
 
 Missing character: There is no ّ (U+0651) in font [lmmono10-regular]:!
+
+LaTeX Warning: File `output_12_0.png' not found on input line 634.
+
+! Unable to load picture or PDF file 'output_12_0.png'.
+<to be read again> 
+                   }
+l.634 ...width}{0.9\paperheight}}{output_12_0.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
 File: output_12_0.png Graphic file (type bmp)
 <output_12_0.png>
-[4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 636--637
 [][]
  []
 
-[5] [6] (./4.aux)
+[3] [4] (./4.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1593,12 +1636,13 @@ Package rerunfilecheck Info: File `4.out' has not changed.
 (rerunfilecheck)             Checksum: 2317C1F6F381D10CA3C5CF161ECBDEB8;2055.
  ) 
 Here is how much of TeX's memory you used:
- 32944 strings out of 476251
- 648037 string characters out of 5790139
+ 33110 strings out of 476336
+ 652035 string characters out of 5792995
  1945839 words of memory out of 5000000
- 54373 multiletter control sequences out of 15000+600000
+ 54518 multiletter control sequences out of 15000+600000
  563605 words of font info for 112 fonts, out of 8000000 for 9000
- 286 hyphenation exceptions out of 8191
- 101i,8n,114p,1313b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 264 hyphenation exceptions out of 8191
+ 101i,8n,114p,1313b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on 4.pdf (6 pages).
+Error 256 (driver return code) generating output;
+file 4.pdf may not be valid.

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.3.10)  27 MAR 2025 14:28
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024/Arch Linux) (preloaded format=xelatex 2025.3.12)  1 APR 2025 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -114,7 +114,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/home/xode/texmf/tex/latex/bytefield/bytefield.sty
+(/usr/share/texmf-dist/tex/latex/bytefield/bytefield.sty
 Package: bytefield 2023/09/24 v2.8 Network protocol diagrams
 
 (/usr/share/texmf-dist/tex/latex/tools/calc.sty
@@ -1492,12 +1492,12 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: 49513F937F10A1E7445D87CD0F4726FE;107.
  ) 
 Here is how much of TeX's memory you used:
- 38734 strings out of 476251
- 864317 string characters out of 5790139
+ 38734 strings out of 476336
+ 864332 string characters out of 5792995
  2024839 words of memory out of 5000000
- 60133 multiletter control sequences out of 15000+600000
+ 60112 multiletter control sequences out of 15000+600000
  565093 words of font info for 103 fonts, out of 8000000 for 9000
- 286 hyphenation exceptions out of 8191
- 98i,12n,101p,2405b,2033s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 264 hyphenation exceptions out of 8191
+ 98i,12n,101p,2405b,1390s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on document.pdf (2 pages).
