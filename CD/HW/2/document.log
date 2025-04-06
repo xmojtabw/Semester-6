@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.1)  3 APR 2025 22:00
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.1)  7 APR 2025 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1373,7 +1373,9 @@ File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
 
 [2]
 
-[3] (./document.aux)
+[3]
+
+[4] (./document.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1382,10 +1384,10 @@ L3 programming layer <2025-01-18>
 Here is how much of TeX's memory you used:
  33104 strings out of 475317
  798484 string characters out of 5762379
- 1623937 words of memory out of 5000000
+ 1623934 words of memory out of 5000000
  55506 multiletter control sequences out of 15000+600000
  565509 words of font info for 103 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
  98i,12n,101p,2405b,1217s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (3 pages).
+Output written on document.pdf (4 pages).
