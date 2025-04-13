@@ -1,6 +1,4 @@
 \beamer@sectionintoc {1}{معرفی}{3}{0}{1}
-\beamer@sectionintoc {2}{Related Work}{8}{0}{2}
-\beamer@sectionintoc {3}{Proposed Method}{10}{0}{3}
-\beamer@sectionintoc {4}{Result}{13}{0}{4}
-\beamer@sectionintoc {5}{Discussion}{15}{0}{5}
-\beamer@sectionintoc {6}{Conclusion}{18}{0}{6}
+\beamer@sectionintoc {2}{یک مدل CNN برای تشخیص ضربان قلب}{7}{0}{2}
+\beamer@sectionintoc {3}{تشخیص deepfake توسط یادگیری عمیق}{18}{0}{3}
+\beamer@sectionintoc {4}{تشخیص فیشینگ توسط CNN}{27}{0}{4}

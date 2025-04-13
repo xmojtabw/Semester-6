@@ -19,36 +19,152 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{knuth:1984}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
-           family={Knuth},
-           familyi={K\bibinitperiod},
-           given={Donald\bibnamedelima E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+    \entry{9302547}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=57eba24662382a865cdee640a7e35c08}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Deng},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1a6265bdb8a388924c6fc48bbef4d892}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Lixian},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9a8e37c2db183faff113a94a5dbc4914}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e25a12a19d7bb81a0ec7dec6741020e4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xingjian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=870ebbd4ef4d4ec4b13b971c2cef4cac}{%
+           family={Sinnott},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima O.},
+           giveni={R\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Oxford University Press}%
-      }
-      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{fullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
-      \strng{authorfullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{namehash}{013f462eedb443838dd0cf9fbbfc50e9}
+      \strng{fullhash}{84131d22c0583d6bc0dfbda686cdc442}
+      \strng{fullhashraw}{84131d22c0583d6bc0dfbda686cdc442}
+      \strng{bibnamehash}{013f462eedb443838dd0cf9fbbfc50e9}
+      \strng{authorbibnamehash}{013f462eedb443838dd0cf9fbbfc50e9}
+      \strng{authornamehash}{013f462eedb443838dd0cf9fbbfc50e9}
+      \strng{authorfullhash}{84131d22c0583d6bc0dfbda686cdc442}
+      \strng{authorfullhashraw}{84131d22c0583d6bc0dfbda686cdc442}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{The Computer Journal}
-      \field{number}{2}
-      \field{title}{Literate Programming}
-      \field{volume}{27}
-      \field{year}{1984}
-      \field{pages}{97\bibrangedash 111}
-      \range{pages}{15}
+      \field{booktitle}{2020 IEEE/ACM International Conference on Big Data Computing, Applications and Technologies (BDCAT)}
+      \field{title}{Deepfake Detection through Deep Learning}
+      \field{year}{2020}
+      \field{pages}{134\bibrangedash 143}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/BDCAT50828.2020.00001
+      \endverb
+      \keyw{Videos;Information integrity;Faces;Convolution;Training;Deep learning;Voting;DeepFake Detection;Xception;MobileNet;FaceForenscis++;Keras;TensorFlow}
+    \endentry
+    \entry{electronics9091514}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=0f0f0d6c0fbd9f174327c7364de3fd71}{%
+           family={Aljofey},
+           familyi={A\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2c2685db35af46d3776a5278fb1a02aa}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Qingshan},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=4c6be711ca4d51ad824304a13682de95}{%
+           family={Qu},
+           familyi={Q\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=59401eee8345d51e749b4eea88f3a8cd}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Mingqing},
+           giveni={M\bibinitperiod}}}%
+        {{hash=317017f2db98f0e749471c9715b93513}{%
+           family={Niyigena},
+           familyi={N\bibinitperiod},
+           given={Jean-Pierre},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{69838742d3d4f97fa156628122ea1094}
+      \strng{fullhash}{0bf8055ba684dd32813253770bbc16d0}
+      \strng{fullhashraw}{0bf8055ba684dd32813253770bbc16d0}
+      \strng{bibnamehash}{69838742d3d4f97fa156628122ea1094}
+      \strng{authorbibnamehash}{69838742d3d4f97fa156628122ea1094}
+      \strng{authornamehash}{69838742d3d4f97fa156628122ea1094}
+      \strng{authorfullhash}{0bf8055ba684dd32813253770bbc16d0}
+      \strng{authorfullhashraw}{0bf8055ba684dd32813253770bbc16d0}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2079-9292}
+      \field{journaltitle}{Electronics}
+      \field{number}{9}
+      \field{title}{An Effective Phishing Detection Model Based on Character Level Convolutional Neural Network from URL}
+      \field{volume}{9}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.3390/electronics9091514
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2079-9292/9/9/1514
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2079-9292/9/9/1514
+      \endverb
+    \endentry
+    \entry{10127341}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=263fc5fc1e320f01ee469fc748a29f59}{%
+           family={Lal},
+           familyi={L\bibinitperiod},
+           given={Ayush},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7a01333f7a8882a1544ea42b848a85a9}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Prashant},
+           giveni={P\bibinitperiod}}}%
+        {{hash=56efa55ef6b20b0bb4856f94021ef1e7}{%
+           family={Halder},
+           familyi={H\bibinitperiod},
+           given={Suman},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e53488f38b55251091cfc6a215bac66}
+      \strng{fullhash}{eddad63164bab5c14531ce6e9d3bb2fd}
+      \strng{fullhashraw}{eddad63164bab5c14531ce6e9d3bb2fd}
+      \strng{bibnamehash}{eddad63164bab5c14531ce6e9d3bb2fd}
+      \strng{authorbibnamehash}{eddad63164bab5c14531ce6e9d3bb2fd}
+      \strng{authornamehash}{6e53488f38b55251091cfc6a215bac66}
+      \strng{authorfullhash}{eddad63164bab5c14531ce6e9d3bb2fd}
+      \strng{authorfullhashraw}{eddad63164bab5c14531ce6e9d3bb2fd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 International Conference on Networking and Communications (ICNWC)}
+      \field{title}{Heartbeat Classification Based on Deep Convolutional Neural Network}
+      \field{year}{2023}
+      \true{nocite}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICNWC57852.2023.10127341
+      \endverb
+      \keyw{Heart;Sensitivity;Arrhythmia;Electrocardiography;Predictive models;Rhythm;Robustness;CardiovascuIar disease;ECG;ImbaIanced dataset;CIassification;CNN}
     \endentry
   \enddatalist
 \endrefsection

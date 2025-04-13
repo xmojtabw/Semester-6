@@ -1,0 +1,547 @@
+%% NOTICE: Overleaf free plan is limiting this compilation, so it is better to compile using your own computer
+\documentclass{beamer}
+
+%% TODO: Uncomment the next three lines to add notes to presentation slides
+%\usepackage{pgfpages}
+%\setbeameroption{show notes on second screen}
+%\setbeamertemplate{note page}{\insertnote}
+
+%\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+
+\usepackage{fontspec}
+
+\usepackage{graphicx}
+
+%% TODO: Put all the figure files inside the images folder
+\graphicspath{{images/}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{pifont}
+
+%% TODO: Use \cmark for tick and \xmark for x
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+%% TODO: Comment the next three lines to remove the bibliography
+\usepackage[backend=biber,style=numeric, citestyle=ieee]{biblatex}
+\addbibresource{bibliography.bib}
+\AtBeginBibliography{\small}
+
+\usepackage{appendixnumberbeamer}
+\pdfstringdefDisableCommands{%
+	\def\translate#1{#1}%
+}
+
+\usepackage{xepersian}
+\settextfont{Vazirmatn FD}
+\setlatintextfont{Noto Serif} 
+
+%% TODO: Comment the next line if you need the control symbol
+\beamertemplatenavigationsymbolsempty
+
+\usetheme{Berlin}
+\useinnertheme{circles}
+
+\makeatletter
+\def\beamer@@frametitle[#1]#2{%
+	\gdef\insertframetitle{\centering{#2\ifnum\beamer@autobreakcount>0\relax{}\space\usebeamertemplate*{frametitle continuation}\fi}}%
+	\gdef\beamer@frametitle{#2}%
+	\gdef\beamer@shortframetitle{#1}}
+\makeatother
+
+
+\ExplSyntaxOn
+\NewDocumentCommand{\ReverseWords}{m}
+{
+	\seq_set_split:Nnn \l_tmpa_seq { ~ } { #1 } % Split words by spaces
+	\seq_reverse:N \l_tmpa_seq % Reverse the order of words
+	\seq_use:Nn \l_tmpa_seq { ~ } % Join words with spaces and output
+}
+\ExplSyntaxOff
+
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{فهرست مطالب}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+%% TODO: Add information to the title page
+\title{کاربرد های نوین شبکه های عصبی و یادگیری عمیق}
+\author{کوروش جمشیدی \and سامان اصغری \and مجتبی ملائی \and مهتا میرزائی}
+\institute{
+	دانشکده مهندسی برق و کامیپوتر \\
+	دانشگاه صنعتی اصفهان	
+}
+\date[short date]{فروردین ۱۴۰۴}
+%\logo{\includegraphics[width=.05\linewidth]{IU}}
+
+%% Page number
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+	\insertshorttitle\hfill%
+	\insertframenumber\,/\,\inserttotalframenumber}
+
+\setbeamertemplate{footline}{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.5ex,dp=1ex,right]{date in head/foot}%
+			\centering
+			\insertframenumber/\inserttotalframenumber\hspace*{2ex}
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
+			دانشگاه صنعتی اصفهان - دانشکده مهندسی کامپیوتر
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.5ex,dp=1ex,left]{author in head/foot}%
+			\raisebox{0.3cm}{\includegraphics[width=0.8cm]{IUT}}%
+			\hspace{0.2cm}
+		\end{beamercolorbox}%
+		
+	}%
+	\vskip0pt%
+}
+
+
+
+\begin{document}
+	
+	%% Title frame
+	\begin{frame}
+		\titlepage
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	%% ToC frame
+	\begin{frame}{فهرست مطالب}
+		\tableofcontents
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	\section{معرفی} 
+	
+	%% TODO: Make sure to use \alert{} for highlighting keywords, and \cite{} to cite the corresponding quotations
+	\begin{frame}{انگیزه ها}
+		\begin{itemize} 	
+			\item 
+			این اولین \alert{کلمه کلیدی هایلایت شده} برای امتحان کردن است.
+			\item 
+			برای دومین مثال از \alert{دومین کلمه کلیدی} به همراه رفرنس در \cite{knuth:1984}.
+			
+		\end{itemize}
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	%% TODO: If you need a button, label the frames accordingly then using \hyperlink{label_of_the_dest_frame}{\beamerbutton{Name of the dest. frame}
+		\begin{latin}
+			\begin{frame}[label=objectives]{هدف‌ها \hyperlink{scope}{\beamerbutton{Scope}}}
+				
+				
+				
+				\begin{block}{Sample Block Title}
+					This block presents a \alert{key concept} that is crucial for understanding the topic.
+				\end{block}
+				\begin{alertblock}{Sample Alert Block Title}
+					This block presents a more alarming \alert{key concept} that is crucial for understanding the topic.
+				\end{alertblock}
+				%% TODO: You can add the note here
+				\note{}
+				
+			\end{frame}
+		\end{latin}
+		\begin{frame}{Actors \& Features}
+			\textbf{Actors:}
+			
+			\textbf{Features:}
+			%% TODO: You can add the note here
+			\note{}
+		\end{frame}
+		
+		\begin{frame}{Contributions}				
+			\begin{block}{Scientific Contribution}
+			\end{block}						
+			\begin{block}{Real-world Contribution}
+			\end{block}					
+			%% TODO: You can add the note here
+			\note{}
+		\end{frame}
+		
+		\section{یک مدل CNN برای تشخیص ضربان قلب}
+		
+		%% TODO: Uncomment the next four lines to enable this frame
+		% \begin{frame}{Advancements}
+			% 	%% TODO: You can add the note here
+			% 	\note{}
+			% \end{frame}
+		
+		\begin{frame}{ECG چیست؟}
+			\begin{itemize}
+				\item ثبت فعالیت قلب 
+				\item رسم سیگنال در قالب نمودار
+				\item یک تست ساده و غیر قابل تهاجمی
+				\item هر ضربان قلب نمایانگر یک سیگنال
+				\item قابل استفاده در تشخیص بیماری
+				
+			\end{itemize}
+			
+			%% TODO: You can add the note here
+			\note{}
+		\end{frame}
+		
+		\begin{frame}{آریتمی چیست؟)}
+			\begin{itemize}
+				\item ریتم غیرطبیعی قلب
+				\item سریع یا کند بودن ضربان قلب
+				\item نامنظم بودن ضربان قلب
+				\item ECG ابزار تشخیص بیماری آریتمی
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{وجود شبکه عصبی}
+			\begin{itemize}
+				\item تفسیر دستی ECG زمان‌بر و دشوار
+				\item نیاز به سیستم‌های خودکار
+				\item افزایش دقت و سرعت با استفاده از سیستم های هوشمند
+				
+			\end{itemize}
+			
+		\end{frame}
+		
+		\begin{frame}{دسته بندی انواع ضربان ها}
+			\begin{itemize}
+				\item[N] $\leftarrow$ ضربان‌های نرمال
+				\item[S] $\leftarrow$ ضربان‌های فوق‌بطنی نابجا
+				\item[V] $\leftarrow$ ضربان‌های بطنی نابجا
+				\item[F] $\leftarrow$ ضربان‌های ترکیبی (فیوژن)
+				\item[Q] $\leftarrow$ ضربان‌های ناشناخته یا غیرقابل طبقه‌بندی
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{چالش داده ها}
+			\begin{itemize}
+				\item تکراری بودن دسته N
+				\item کمبود داده ها در سایر دسته‌ها
+				\item عدم دقت مدل به علت ناتوازنی داده‌ها
+				\item تولید داده مصنوعی برای تعادل
+				\item افزایش کلاس‌های کم‌نمونه به اندازه N
+				
+			\end{itemize}
+		\end{frame}
+		
+		
+		\begin{frame}{معماری شبکه}
+			\footnotesize
+			\centering
+			\captionsetup{skip=0pt}
+			\begin{figure}
+				\includegraphics[width=0.8\linewidth,height=0.3\linewidth]{images/ecg1}
+				\caption*{\scriptsize شکل ۱: ساخته‌شده توسط ChatGPT}
+			\end{figure}
+			
+			%\vspace{0.5em}
+			\begin{columns}
+				\column{0.5\textwidth}
+				\begin{itemize}
+					\item ۳ لایه کانولوشن برای استخراج ویژگی
+					\item ۳ لایه \ReverseWords{max pooling} برای کاهش ابعاد 
+					\item ۳ لایه \ReverseWords{fully connected} نهایی
+				\end{itemize}
+				
+				\column{0.5\textwidth}
+				\begin{itemize}
+					\item خروجی softmax با ۵ دسته مختلف
+					\item فعال‌ساز \ReverseWords{Leaky ReLU} در لایه‌ها
+					\item آموزش با backpropagation در ۲۰ تکرار
+				\end{itemize}
+			\end{columns}
+		\end{frame}
+		
+		
+		
+		\begin{frame}{نتایج}
+			\begin{itemize}
+				\item دقت بالا در تشخیص دسته‌ها
+				\item عملکرد بهتر با داده تمیز \ReverseWords{(Set B)}
+				\item دقت نهایی حدود 94 درصد
+				\item حساسیت بالا در تمام دسته‌ها
+				\item بهترین عملکرد توسط کلاس Q
+				
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{مزایا و معایب}
+			\begin{columns}
+				\column{0.5\textwidth}
+				\begin{block}{مزایا}
+					\begin{itemize}
+						\item[\faCheck] کاملاً خودکار و سریع
+						\item[\faCheck] مقاوم در برابر نویز سیگنال
+						\item[\faCheck] بدون نیاز به استخراج ویژگی
+					\end{itemize}
+				\end{block}
+				
+				
+				
+				\column{0.5\textwidth}
+				\begin{alertblock}{معایب}
+					\begin{itemize}
+						\item[\faTimes] آموزش سنگین و زمان‌بر
+						\item[\faTimes] نیاز به سخت‌افزار قوی 
+						\item[\faTimes] احتمال وجود خطا
+					\end{itemize}
+				\end{alertblock}
+				
+				
+			\end{columns}
+		\end{frame}
+		
+		\begin{frame}{نتیجه گیری}
+			\begin{itemize}
+				\item[\faClipboardCheck] CNN یک ابزار قدرتمند در پزشکی
+				\item[\faClipboardCheck] دقت بالا در طبقه‌بندی ضربان
+				\item[\faClipboardCheck] کاهش زمان بررسی ECG
+				\item[\faClipboardCheck] قابل اجرا در سیستم‌های بالینی
+				\item[\faClipboardCheck] مناسب برای غربال‌گری سریع بیماران
+				
+			\end{itemize}
+		\end{frame}
+		\begin{frame}{در آینده}
+			\centering
+			\LARGE  \faQuestionCircle  \hspace{0.2cm}  تشخیص توالی‌های زمانی  ECG  
+		\end{frame}
+		
+		%% TODO: Uncomment the next four lines to enable this frame
+		% \begin{frame}{Technical difficulties}				
+			% 	%% TODO: You can add the note here
+			% 	\note{}
+			% \end{frame}
+		
+		\section{تشخیص deepfake توسط یادگیری عمیق} 
+		
+		%% TODO: Adjust the size of the figure by using [scale=x] or [widht=.x\linewidth] (x is a fraction) to fit within the frame. Then rename to your picture file name and add the caption
+		\begin{frame}{Overview}
+			\begin{figure}
+				\centering
+				\includegraphics[width=.8\linewidth]{samplel.png}
+				\caption{The caption of the figure.}
+			\end{figure}	
+			%% TODO: You can add the note here
+			\note{}
+		\end{frame}
+		
+		%% TODO: Uncomment the next four lines to enable this frame
+		% \begin{frame}{Methodology}
+			% 	%% TODO: You can add the note here
+			% 	\note{}
+			% \end{frame}
+		
+		\begin{frame}[label=process1]{\texttt{Sample} Process \hyperlink{algo1}{\beamerbutton{Algorithm}} \hyperlink{pseudocode1}{\beamerbutton{Pseudocode}}}
+			\begin{columns}
+				\column{0.3\textwidth}
+				\centering
+				\includegraphics[height=1.8\textwidth]{samplev.png}
+				\column{0.7\textwidth}
+				\begin{itemize}
+					\item \textbf{Goal:}
+					\item \textbf{Result:}
+					\item \textbf{Step:} 
+					\item \textbf{Scope:}
+				\end{itemize}
+			\end{columns}
+			%% TODO: You can add the note here
+			\note{}
+		\end{frame}
+		
+		
+		\section{تشخیص فیشینگ توسط CNN} 
+		
+		\begin{frame}{چرا تشخیص فیشینگ چالش برانگیز است؟
+			}
+			%% TODO: Add your GitHub repository link here
+			\textbf{GitHub repository:} \url{}
+			
+			%% TODO: Add your demo website link here
+			\textbf{Demo Website:} \url{}
+			
+			\begin{columns}
+				\column{0.5\textwidth}
+				\begin{figure}
+					\centering
+					\includegraphics[width=.8\textwidth]{samples1.png}
+					\caption{The caption of the figure.}
+				\end{figure}	
+				\column{0.5\textwidth}
+				\begin{figure}
+					\centering
+					\includegraphics[width=.8\textwidth]{samples2.png}
+					\caption{The caption of the figure.}
+				\end{figure}
+			\end{columns}
+			%% TODO: You can add the note here
+			\note{}
+		\end{frame}
+		
+		%% TODO: Uncomment the next four lines to enable this frame
+		% \begin{frame}{Benchmark Results}
+			% 	%% TODO: You can add the note here
+			% 	\note{}	
+			% \end{frame}
+		
+		\section{Discussion} 
+		
+		%% TODO: Uncomment the next four lines to enable this frame
+		% \begin{frame}{Analysis}
+			% 	%% TODO: You can add the note here
+			% 	\note{}
+			% \end{frame}
+		
+		\begin{frame}{Limitations}
+			$\Rightarrow$ \textbf{Concluding statement.}
+			%% TODO: You can add the note here
+			\note{}
+		\end{frame}
+		
+		\begin{frame}{Comparison}
+			\begin{table}[ht]
+				\centering
+				\caption{Comparison of different methods (\protect\cmark: YES, \protect\xmark: NO).}
+				%% Comment the next line if the table width is relatively small
+				\resizebox{\textwidth}{!}{%
+					\begin{tabular}{lcccccc}
+						\hline
+						& \textbf{Your Method} & Method B & Method C & Method D & Method E & Method F \\ \hline
+						Feature 1 & \cmark               & \cmark   & \xmark   & \cmark   & \xmark   & \cmark   \\ 
+						Feature 2 & \cmark               & \xmark   & \cmark   & \cmark   & \cmark   & \xmark   \\ 
+						Feature 3 & \xmark               & \cmark   & \cmark   & \xmark   & \xmark   & \cmark   \\ 
+						Feature 4 & \cmark               & \cmark   & \xmark   & \xmark   & \cmark   & \xmark   \\ 
+						Feature 5 & \xmark               & \xmark   & \cmark   & \cmark   & \xmark   & \cmark   \\ 
+						Feature 6 & \cmark               & \xmark   & \cmark   & \xmark   & \xmark   & \xmark   \\ \hline
+					\end{tabular}%
+					%%TODO: Also comment this } to match the above command
+			}
+		\end{table}
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	\section{Conclusion}
+	
+	%% TODO: Uncomment the next four lines to enable this frame
+	% \begin{frame}{Summary}
+		% 	%% TODO: You can add the note here
+		% 	\note{}
+		% \end{frame}
+	
+	%% TODO: Uncomment the next four lines to enable this frame
+	% \begin{frame}{Future works}		
+		% 	%% TODO: You can add the note here
+		% 	\note{}
+		% \end{frame}
+	
+	\begin{frame}{Demonstration}
+		\begin{block}{Process A}
+		\end{block}
+		\begin{block}{Scenario 1}
+		\end{block}
+		\begin{alertblock}{Scenario 2}
+		\end{alertblock}
+		\begin{block}{Process B}
+		\end{block}
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	%% Thank You frame
+	\begin{frame}
+		\centering
+		\includegraphics[width=.7\linewidth]{thankyou}
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	%% Appendix frames
+	\appendix
+	
+	\begin{frame}[label=scope]{Scope \hyperlink{objectives}{\beamerbutton{Back to Objectives}}}
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	\begin{frame}[label=algo1]{Formalizing - \texttt{Sample} Algorithm \hyperlink{process1}{\beamerbutton{Back to $\texttt{Sample}$ process}}}
+		\begin{algorithm}[H]
+			\small
+			\caption{$(\text{Result}) \gets \texttt{Sample}(\text{Input1})$}
+			\label{alg:algo1}
+			\begin{algorithmic}[1]
+				\Require $\text{Input1}$ is a predefined parameter.
+				\State $\text{Set} \gets \emptyset$
+				\For{$\text{element} \in \text{Input1}$}
+				\If{$\text{Condition}(\text{element})$ is true}
+				\State $\text{Set} \gets \text{Set} \cup \{\text{Process}(\text{element})\}$
+				\Else
+				\State \textbf{continue}
+				\EndIf
+				\EndFor
+				\State $\text{Intermediate} \gets \texttt{Transform}(\text{Set})$
+				\State \Return $\text{Result}$
+			\end{algorithmic}
+		\end{algorithm}
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	\begin{frame}[label=pseudocode1]{Formalizing - \texttt{Sample} Pseudocode \hyperlink{process1}{\beamerbutton{Back to $\texttt{Sample}$ process}}}
+		\begin{latin}
+			
+			\begin{algorithm}[H]
+				\small
+				\caption{$(\text{Result}) \gets \texttt{Sample}(\text{Input1})$}
+				\label{alg:pseudocode1}
+				\begin{algorithmic}[1]
+					\Require $\text{Input1}$ is a predefined parameter.
+					\State $\text{Set} \gets \emptyset$
+					\For{$\text{element} \in \text{Input1}$}
+					\If{$\text{Condition}(\text{element})$ is true}
+					\State $\text{Set} \gets \text{Set} \cup \{\text{Process}(\text{element})\}$
+					\Else
+					\State \textbf{continue}
+					\EndIf
+					\EndFor
+					\State $\text{Intermediate} \gets \texttt{Transform}(\text{Set})$
+					\State \Return $\text{Result}$
+				\end{algorithmic}
+			\end{algorithm}
+		\end{latin}
+		%% TODO: You can add the note here
+		\note{}
+	\end{frame}
+	
+	%% TODO: Uncomment the next four lines to enable this frame
+	% \begin{frame}{System architecture}
+		% 	%% TODO: You can add the note here
+		% 	\note{}
+		% \end{frame}
+	
+	%% TODO: Uncomment the next four lines to enable this frame
+	% \begin{frame}{Tech strategy choices}
+		% 	%% TODO: You can add the note here
+		% 	\note{}
+		% \end{frame}
+	
+	\begin{frame}[allowframebreaks, noframenumbering]{References}
+		\begin{latin}
+			\printbibliography[heading=none]
+		\end{latin}
+		
+	\end{frame}
+	
+\end{document}

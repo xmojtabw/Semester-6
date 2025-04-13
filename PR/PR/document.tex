@@ -6,7 +6,10 @@
 %\setbeameroption{show notes on second screen}
 %\setbeamertemplate{note page}{\insertnote}
 
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{fontawesome5}
+
+\usepackage{fontspec}
 
 \usepackage{graphicx}
 
@@ -15,7 +18,7 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
-
+\usepackage{caption}
 \usepackage{pifont}
 
 %% TODO: Use \cmark for tick and \xmark for x
@@ -45,6 +48,24 @@
 \usetheme{Berlin}
 \useinnertheme{circles}
 
+\makeatletter
+\def\beamer@@frametitle[#1]#2{%
+	\gdef\insertframetitle{\centering{#2\ifnum\beamer@autobreakcount>0\relax{}\space\usebeamertemplate*{frametitle continuation}\fi}}%
+	\gdef\beamer@frametitle{#2}%
+	\gdef\beamer@shortframetitle{#1}}
+\makeatother
+
+
+\ExplSyntaxOn
+\NewDocumentCommand{\ReverseWords}{m}
+{
+	\seq_set_split:Nnn \l_tmpa_seq { ~ } { #1 } % Split words by spaces
+	\seq_reverse:N \l_tmpa_seq % Reverse the order of words
+	\seq_use:Nn \l_tmpa_seq { ~ } % Join words with spaces and output
+}
+\ExplSyntaxOff
+
+
 \AtBeginSection[]
 {
 	\begin{frame}
@@ -54,19 +75,40 @@
 }
 
 %% TODO: Add information to the title page
-\title{شبکه های عصبی}
-\author{اسم افراد \\\textbf{Supervisor:} Your Supervisor \\\textbf{Reviewer:} Your Reviewer}
-\institute[SCSE HCMIU - VNUHCM]{
-	School of Computer Science and Engineering, \\ 
-	International University, Ho Chi Minh City, Vietnam \\
-	Vietnam National University, Ho Chi Minh City, Vietnam}
-\date[Thesis Defense]{Thesis Defense \\ Date of the thesis defense}
-\logo{\includegraphics[width=.05\linewidth]{IU}}
+\title{کاربرد های نوین شبکه های عصبی و یادگیری عمیق}
+\author{کوروش جمشیدی \\ سامان اصغری \\ مجتبی ملائی \\ مهتا میرزائی}
+\institute{
+دانشکده مهندسی کامپیوتر \\
+دانشگاه صنعتی اصفهان	
+  }
+\date[short date]{فروردین ۱۴۰۴}
+%\logo{\includegraphics[width=.05\linewidth]{IU}}
 
 %% Page number
 \expandafter\def\expandafter\insertshorttitle\expandafter{%
 	\insertshorttitle\hfill%
 	\insertframenumber\,/\,\inserttotalframenumber}
+	
+\setbeamertemplate{footline}{
+	\leavevmode%
+	\hbox{%
+		\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.5ex,dp=1ex,right]{date in head/foot}%
+			\centering
+			\insertframenumber/\inserttotalframenumber\hspace*{2ex}
+		\end{beamercolorbox}%
+		\begin{beamercolorbox}[wd=.7\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
+			دانشگاه صنعتی اصفهان - دانشکده مهندسی کامپیوتر
+		\end{beamercolorbox}%
+\begin{beamercolorbox}[wd=.15\paperwidth,ht=2.5ex,dp=1ex,left]{author in head/foot}%
+	\raisebox{0.3cm}{\includegraphics[width=0.8cm]{IUT}}%
+	\hspace{0.2cm}
+\end{beamercolorbox}%
+
+	}%
+	\vskip0pt%
+}
+
+	
 
 \begin{document}
 	
@@ -87,53 +129,55 @@
 	\section{معرفی} 
 	
 	%% TODO: Make sure to use \alert{} for highlighting keywords, and \cite{} to cite the corresponding quotations
-	\begin{frame}{انگیزه ها}
-		\begin{itemize} 	
-			\item 
-			این اولین \alert{کلمه کلیدی هایلایت شده} برای امتحان کردن است.
-			\item 
-			برای دومین مثال از \alert{دومین کلمه کلیدی} به همراه رفرنس در \cite{knuth:1984}.
-
-		\end{itemize}
-		%% TODO: You can add the note here
-		\note{}
+	\begin{frame}{شبکه عصبی}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\begin{itemize}
+				\item نورون
+				\item لایه‌های مختلف
+				\item کانال‌ها
+				\item Activation Function
+				\item Forward Propagation 
+				\item تشخیص خطا
+				\item Backward Propagation
+			\end{itemize}
+			\column{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.97\linewidth]{images/screenshot007}
+				\caption*{\scriptsize شکل ۱-۱: شبکه عصبی\\ ساخته شده با ChatGPT}
+				\label{fig:screenshot007}
+			\end{figure}
+		\end{columns}
 	\end{frame}
 	
-	%% TODO: If you need a button, label the frames accordingly then using \hyperlink{label_of_the_dest_frame}{\beamerbutton{Name of the dest. frame}
-		\begin{latin}
-		\begin{frame}[label=objectives]{هدف‌ها \hyperlink{scope}{\beamerbutton{Scope}}}
-			
-				
-		
-			\begin{block}{Sample Block Title}
-				This block presents a \alert{key concept} that is crucial for understanding the topic.
-			\end{block}
-			\begin{alertblock}{Sample Alert Block Title}
-				This block presents a more alarming \alert{key concept} that is crucial for understanding the topic.
-			\end{alertblock}
-			%% TODO: You can add the note here
-			\note{}
+\begin{frame}{مثال}
+	\begin{figure}
+		\centering
+		\noindent
+		\vspace{-0.6cm}
+		\hspace{5cm}
+		\includegraphics[width=1\textwidth,height=0.77\textheight]{images/screenshot008}
+		\caption*{\scriptsize شکل ۱-۲: یک مثال از شبکه عصبی \lr{https://youtube.com/Simplilearn }}
+		\label{fig:screenshot008}
+\end{figure}
+\end{frame}
 
-		\end{frame}
-						\end{latin}
-		\begin{frame}{Actors \& Features}
-			\textbf{Actors:}
-			
-			\textbf{Features:}
-			%% TODO: You can add the note here
-			\note{}
-		\end{frame}
+
 		
-		\begin{frame}{Contributions}				
-			\begin{block}{Scientific Contribution}
-			\end{block}						
-			\begin{block}{Real-world Contribution}
-			\end{block}					
-			%% TODO: You can add the note here
-			\note{}
-		\end{frame}
+
+	\begin{frame}{شبکه های عصبی کانولوشنی (CNN)}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1\textwidth]{images/screenshot009}
+			\caption{\scriptsize شکل ۱-۳: شبکه های CNN ساخته شده با ChatGPT}
+			\label{fig:screenshot009}
+		\end{figure}
 		
-		\section{Related Work}
+	\end{frame}
+	%% TODO: If you need a button, label the frames accordingly then using \hyperlink{label_of_the_dest_frame}{\beamerbutton{Name of the dest. frame}
+		
+		\section{یک مدل CNN برای تشخیص ضربان قلب}
 		
 		%% TODO: Uncomment the next four lines to enable this frame
 		% \begin{frame}{Advancements}
@@ -141,155 +185,431 @@
 			% 	\note{}
 			% \end{frame}
 		
-		\begin{frame}{Research gaps}
-			\begin{alertblock}{Research gap}
-			\end{alertblock}
-			
-			$\Rightarrow$ \textbf{Concluding statement.}
+		\begin{frame}{ECG چیست؟}
+			\begin{itemize}
+				\item ثبت فعالیت قلب 
+				\item رسم سیگنال در قالب نمودار
+				\item یک تست ساده و غیر قابل تهاجمی
+				\item هر ضربان قلب نمایانگر یک سیگنال
+				\item قابل استفاده در تشخیص بیماری
+				
+			\end{itemize}
 			
 			%% TODO: You can add the note here
 			\note{}
 		\end{frame}
 		
+		\begin{frame}{آریتمی چیست؟}
+			\begin{itemize}
+				\item ریتم غیرطبیعی قلب
+				\item سریع یا کند بودن ضربان قلب
+				\item نامنظم بودن ضربان قلب
+				\item ECG ابزار تشخیص بیماری آریتمی
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{وجود شبکه عصبی}
+			\begin{itemize}
+				\item تفسیر دستی ECG زمان‌بر و دشوار
+				\item نیاز به سیستم‌های خودکار
+				\item افزایش دقت و سرعت با استفاده از سیستم های هوشمند
+				
+			\end{itemize}
+			
+		\end{frame}
+		
+		\begin{frame}{دسته بندی انواع ضربان‌ها}
+			\begin{itemize}
+				\item[N] $\leftarrow$ ضربان‌های نرمال
+				\item[S] $\leftarrow$ ضربان‌های فوق‌بطنی نابجا
+				\item[V] $\leftarrow$ ضربان‌های بطنی نابجا
+				\item[F] $\leftarrow$ ضربان‌های ترکیبی (فیوژن)
+				\item[Q] $\leftarrow$ ضربان‌های ناشناخته یا غیرقابل طبقه‌بندی
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{چالش داده‌ها}
+			\begin{itemize}
+				\item تکراری بودن دسته N
+				\item کمبود داده‌ها در سایر دسته‌ها
+				\item عدم دقت مدل به علت ناتوازنی داده‌ها
+				\item تولید داده مصنوعی برای تعادل
+				\item افزایش کلاس‌های کم‌نمونه به اندازه N
+				
+			\end{itemize}
+		\end{frame}
+
+		
+\begin{frame}{معماری شبکه}
+
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{itemize}
+		\item ۳ لایه کانولوشن برای استخراج ویژگی
+		\item ۳ لایه \ReverseWords{max pooling} برای کاهش ابعاد 
+		\item فعال‌ساز \ReverseWords{Leaky ReLU} در لایه‌ها
+	\end{itemize}
+	\column{0.55\textwidth}
+	\begin{figure}
+		\includegraphics[width=0.93\linewidth,height=0.9\linewidth]{images/ecg11}
+		\caption*{\scriptsize شکل ۲-۱: قسمت اول معماری شبکه مورد نظر ساخته‌شده توسط ChatGPT}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}{معماری شبکه (ادامه)}
+
+	\centering
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}
+			\item ۳ لایه \ReverseWords{fully connected} نهایی
+			\item خروجی softmax با ۵ دسته مختلف
+			\item آموزش با backpropagation در ۲۰ تکرار
+		\end{itemize}
+		
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.93\linewidth,height=0.9\linewidth]{images/ecg12}
+			\caption*{\scriptsize شکل ۲-۲: قسمت دوم معماری شبکه مورد نظر ساخته‌شده توسط ChatGPT}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}{نتایج}
+	\begin{itemize}
+		\item دقت بالا در تشخیص دسته‌ها
+		\item عملکرد بهتر با داده تمیز \ReverseWords{(Set B)}
+		\item دقت نهایی حدود 94 درصد
+		\item حساسیت بالا در تمام دسته‌ها
+		\item بهترین عملکرد توسط کلاس Q
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{مزایا و معایب}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{block}{مزایا}
+		\begin{itemize}
+			\item[\faCheck] کاملاً خودکار و سریع
+			\item[\faCheck] مقاوم در برابر نویز سیگنال
+			\item[\faCheck] بدون نیاز به استخراج ویژگی
+		\end{itemize}
+		\end{block}
+		
+
+		
+		\column{0.5\textwidth}
+		 \begin{alertblock}{معایب}
+		 \begin{itemize}
+		 	\item[\faTimes] آموزش سنگین و زمان‌بر
+		 	\item[\faTimes] نیاز به سخت‌افزار قوی 
+		 	\item[\faTimes] احتمال وجود خطا
+		 \end{itemize}
+		 \end{alertblock}
+
+		
+	\end{columns}
+\end{frame}
+
+\begin{frame}{نتیجه گیری}
+	\begin{itemize}
+		\item[\faClipboardCheck] CNN یک ابزار قدرتمند در پزشکی
+		\item[\faClipboardCheck] دقت بالا در طبقه‌بندی ضربان
+		\item[\faClipboardCheck] کاهش زمان بررسی ECG
+		\item[\faClipboardCheck] قابل اجرا در سیستم‌های بالینی
+		\item[\faClipboardCheck] مناسب برای غربال‌گری سریع بیماران
+		
+	\end{itemize}
+\end{frame}
+%\begin{frame}{در آینده}
+%	\centering
+%	\LARGE  \faQuestionCircle  \hspace{0.2cm}  تشخیص توالی‌های زمانی  ECG  
+%\end{frame}
+
 		%% TODO: Uncomment the next four lines to enable this frame
 		% \begin{frame}{Technical difficulties}				
 			% 	%% TODO: You can add the note here
 			% 	\note{}
 			% \end{frame}
 		
-		\section{Proposed Method} 
+\section{تشخیص deepfake توسط یادگیری عمیق} 
 		
 		%% TODO: Adjust the size of the figure by using [scale=x] or [widht=.x\linewidth] (x is a fraction) to fit within the frame. Then rename to your picture file name and add the caption
-		\begin{frame}{Overview}
-			\begin{figure}
-				\centering
-				\includegraphics[width=.8\linewidth]{samplel.png}
-				\caption{The caption of the figure.}
-			\end{figure}	
-			%% TODO: You can add the note here
-			\note{}
-		\end{frame}
+	\begin{frame}{Deepfake}
+		\begin{columns}
+			\column{0.55\textwidth}
+				\begin{itemize}
+				\item  رسانه‌ها و شبکه‌های‌ اجتماعی
+				\item اخبار غلط
+				\item یادگیری عمیق
+				\item \textbf{deepfake} ترکیب \ReverseWords{deep learning} و fake
+				\item تشخیص دشوار
+				\item ایجاد محدودیت‌های جدید
+			\end{itemize}
+			\hfill
+			\column{0.5\textwidth}
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.7\linewidth,height=0.25\textheight]{images/screenshot001}
+					\caption*{\scriptsize شکل ۲-۱: ویدئو deepfake از Barack Obama \\  \tiny \lr{https://www.youtube.com/watch?v=cQ54GDm1eL0}}
+					\label{fig:screenshot001}
+				\end{figure}
+				\vspace{-0.7cm}
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.7\linewidth,height=0.25\textheight]{images/screenshot002}
+					\caption*{\scriptsize شکل ۲-۲: ویدئو deepfake از Nicholas Cage \\ 
+					\tiny \lr{https://www.youtube.com/watch?v=BU9YAHigNx8}}
+					\label{fig:screenshot002}
+				\end{figure}
+				
+		\end{columns}
+
+	\end{frame}
 		
+	\begin{frame}{ویدئو‌ها از چهره افراد}
+\begin{columns}
+	
+\column{0.55\textwidth}
+\vspace{-0.2cm}
+\begin{block}{\normalsize جابه‌جایی چهره (Face-swapping)}
+	\begin{itemize}
+		\item 	جابه‌جا کردن چهره فرد داخل ویدئو
+		\item انتقال حالات صورت از فرد اصلی 
+		\item  جا‌به‌جایی چهره با یک فرد مشهور
+		\item \texttt{Faceswap-GAN}
+	\end{itemize}
+\end{block}
+\vspace{-0.2cm}
+\begin{block}{\normalsize بازسازی چهره (face-reenactment)}
+	\begin{itemize}
+		\item ثابت ماندن هویت فرد اصلی 
+		\item انتقال حالات چهره به فرد اصلی
+		\item به حرکت در آوردن چهره در عکس 
+		\item \texttt{Face2Face}
+	\end{itemize}
+\end{block}
+\column{0.5\textwidth}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\linewidth]{images/sensors-22-04697-g001-550}
+	\caption*{\scriptsize شکل ۲-۳: مقایسه جابه‌جایی چهره و بازسازی چهره \tiny \lr{https://www.mdpi.com/sensors/sensors-22-04697/article-deploy/html/images/sensors-22-04697-g001-550.jpg}}
+	\label{fig:sensors-22-04697-g001-550}
+\end{figure}
+
+\end{columns}
+	\end{frame}
+
+
+	
+	
+	
+	\begin{frame}{مجموعه داده‌ها (Datasets)}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}
+			\item FaceForensics++
+			\item ۸۰٪ برای یادگیری
+			\item ۲۰٪ برای تست 
+		\end{itemize}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.9\linewidth]{images/screenshot003}
+			\caption*{\scriptsize شکل ۲-۴: مشخصات مجموعه داده‌ها \cite{9302547}}
+			\label{fig:screenshot003}
+		\end{figure}
+	\end{columns}
+	
+\end{frame}
+
+
+
+
+\begin{frame}{پیش پردازش داده ها}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{itemize}
+			\item[\faExclamationCircle] عکس به عنوان ورودی مدل
+			\begin{itemize}
+				\item تبدیل ویدئو به فریم ها
+				\item یک فریم از هر چهار فریم
+			\end{itemize}
+			\item[\faExclamationCircle] تشخیص بر اساس چهره
+			\begin{itemize}
+				\item  جداسازی چهره ها 
+				\item \ReverseWords{cascade classifier}
+			\end{itemize}
+		\end{itemize}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.85\linewidth]{images/screenshot004}
+			\caption*{\scriptsize شکل ۲-۵: جدا سازی فریم و پردازش آنها \cite{9302547}}
+			\label{fig:screenshot004}
+		\end{figure}
+		
+	\end{columns}
+	
+
+\end{frame}	
+\begin{frame}{مدل های یادگیری عمیق}
+\begin{enumerate}
+	\item \textbf{Xception}
+	\begin{itemize}
+		\item CNN
+		\item معرفی توسط گوگل در سال ۲۰۱۷
+		\item ۳۶ لایه کانولوشن در ۱۴ قسمت
+		\item \ReverseWords{logistic regression} در لایه آخر  
+	\end{itemize}
+	\item \textbf{MobileNets}
+	\begin{itemize}
+		\item CNN
+		\item سبک و بهینه
+		\item ۲۸ لایه 
+		\item پیاده سازی با TensorFlow	
+	\end{itemize}
+\end{enumerate}
+\end{frame}	
+
+\begin{frame}{نتایج}
+	
+	\begin{columns}
+		\column{0.4\textwidth}
+		\small
+		\begin{itemize}
+			\item ۸ مدل
+			\item  عملکرد بهتر Xception
+			\item دشواری تشخیص در NeuralTexture 
+			\item تشخیص ویدئو مربوط به Obama
+		\end{itemize}
+		\column{0.8\textwidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=1\linewidth]{images/screenshot005}
+			\caption*{\scriptsize شکل ۲-۶: مقایسه نتایج مدل‌ها\cite{9302547}}
+			\label{fig:screenshot005}
+		\end{figure}
+		
+	\end{columns}
+\end{frame}
+\begin{frame}{‌چالش‌ها}
+\begin{columns}
+	\column{0.5\textwidth}
+		\begin{itemize}
+		\item[\faQuestionCircle] چرا مدل‌های جداگانه؟
+		\item[\faExclamationCircle] ویدئو‌های مربوط به مدل‌های دیگر 
+		\item[\faClipboardCheck] مکانیزم رائ‌گیری
+	\end{itemize}
+	\column{0.65\textwidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.95\linewidth]{images/screenshot006}
+		\caption*{\scriptsize شکل ۲-۷: بررسی مجموعه داده‌های دیگر با Deepfakes \cite{9302547}}
+		\label{fig:screenshot006}
+	\end{figure}
+	
+\end{columns}	
+
+\end{frame}
+
+\begin{frame}{قدمی های بعدی}
+	\begin{itemize}
+		\item[\faClipboardList] تغییر تابع هزینه و Optimizer
+		\item[\faClipboardList] بررسی جداگانه اجزای صورت 
+		\item[\faClipboardList] تشخیص بر اساس ویدئو
+	\end{itemize}
+\end{frame}
 		%% TODO: Uncomment the next four lines to enable this frame
 		% \begin{frame}{Methodology}
 			% 	%% TODO: You can add the note here
 			% 	\note{}
 			% \end{frame}
 		
-		\begin{frame}[label=process1]{\texttt{Sample} Process \hyperlink{algo1}{\beamerbutton{Algorithm}} \hyperlink{pseudocode1}{\beamerbutton{Pseudocode}}}
-			\begin{columns}
-				\column{0.3\textwidth}
+
+		
+
+\section{تشخیص فیشینگ توسط CNN} 
+		\begin{frame}{ انواع مدل‌های تشخیص فیشینگ}
+			\begin{figure}
 				\centering
-				\includegraphics[height=1.8\textwidth]{samplev.png}
-				\column{0.7\textwidth}
-				\begin{itemize}
-					\item \textbf{Goal:}
-					\item \textbf{Result:}
-					\item \textbf{Step:} 
-					\item \textbf{Scope:}
-				\end{itemize}
-			\end{columns}
-			%% TODO: You can add the note here
-			\note{}
+				\includegraphics[width=0.87\linewidth,height=0.5\linewidth]{images/fishing2}
+				\caption*{\scriptsize شکل ۴-۱: نگاهی به روش های تشخیص فیشینگ \cite{electronics9091514}}
+				\label{fig:fishing2}
+			\end{figure}
 		\end{frame}
 		
-		\section{Result} 
 		
-		\begin{frame}{Prototyping}
-			%% TODO: Add your GitHub repository link here
-			\textbf{GitHub repository:} \url{}
-			
-			%% TODO: Add your demo website link here
-			\textbf{Demo Website:} \url{}
-			
-			\begin{columns}
-				\column{0.5\textwidth}
-				\begin{figure}
-					\centering
-					\includegraphics[width=.8\textwidth]{samples1.png}
-					\caption{The caption of the figure.}
-				\end{figure}	
-				\column{0.5\textwidth}
-				\begin{figure}
-					\centering
-					\includegraphics[width=.8\textwidth]{samples2.png}
-					\caption{The caption of the figure.}
-				\end{figure}
-			\end{columns}
-			%% TODO: You can add the note here
+		\begin{frame}{چرا تشخیص فیشینگ چالش برانگیز است؟}
+			\begin{itemize}
+				\item شباهت ظاهری سایت های جعلی
+				\item ناشناخته بودن حملات روز صفر
+				\item لیست های سیاه قابل دور زدن 
+				\item نیاز به بررسی سریع و مستقل
+			\end{itemize}
 			\note{}
 		\end{frame}
-		
-		%% TODO: Uncomment the next four lines to enable this frame
-		% \begin{frame}{Benchmark Results}
-			% 	%% TODO: You can add the note here
-			% 	\note{}	
-			% \end{frame}
-		
-		\section{Discussion} 
-		
-		%% TODO: Uncomment the next four lines to enable this frame
-		% \begin{frame}{Analysis}
-			% 	%% TODO: You can add the note here
-			% 	\note{}
-			% \end{frame}
-		
-		\begin{frame}{Limitations}
-			$\Rightarrow$ \textbf{Concluding statement.}
-			%% TODO: You can add the note here
-			\note{}
+		\begin{frame}{راهکار شبکه های عصبی: مدل CNN بر پایه URL}
+			\begin{itemize}
+				\item[\faExternalLink*] ورودی فقط آدرس URL 
+				\item[\faUserAltSlash] عدم نیاز به بررسی محتوای سایت
+				\item[\faShield*] مقاوم در برابر حملات روز صفر
+				\item[\faStopwatch] زمان تشخیص: 47.0 میلی ثانیه!
+				\item[\faUnlink] مدل کاملا مستقل
+
+			\end{itemize}
 		\end{frame}
 		
-		\begin{frame}{Comparison}
-			\begin{table}[ht]
+		
+		\begin{frame}{ساختار مدل}
+			\begin{itemize}
+				\item بردار one-hot برای هر کاراکتر
+				\item حداکثر ۲۰۰ کاراکتر
+				\item ۷ لایه کانولوشن متوالی
+				\item ۳ لایه \ReverseWords{fully connected} نهایی
+				\item خروجی: فیشینگ/عادی
+				
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{ساختار مدل (ادامه)}
+			\begin{figure}
 				\centering
-				\caption{Comparison of different methods (\protect\cmark: YES, \protect\xmark: NO).}
-				%% Comment the next line if the table width is relatively small
-				\resizebox{\textwidth}{!}{%
-					\begin{tabular}{lcccccc}
-						\hline
-						& \textbf{Your Method} & Method B & Method C & Method D & Method E & Method F \\ \hline
-						Feature 1 & \cmark               & \cmark   & \xmark   & \cmark   & \xmark   & \cmark   \\ 
-						Feature 2 & \cmark               & \xmark   & \cmark   & \cmark   & \cmark   & \xmark   \\ 
-						Feature 3 & \xmark               & \cmark   & \cmark   & \xmark   & \xmark   & \cmark   \\ 
-						Feature 4 & \cmark               & \cmark   & \xmark   & \xmark   & \cmark   & \xmark   \\ 
-						Feature 5 & \xmark               & \xmark   & \cmark   & \cmark   & \xmark   & \cmark   \\ 
-						Feature 6 & \cmark               & \xmark   & \cmark   & \xmark   & \xmark   & \xmark   \\ \hline
-					\end{tabular}%
-					%%TODO: Also comment this } to match the above command
-			}
-		\end{table}
-		%% TODO: You can add the note here
-		\note{}
-	\end{frame}
+				\includegraphics[width=0.87\linewidth,height=0.5\linewidth]{images/fishing1}
+				\caption*{\scriptsize شکل ۴-۲: مروری بر مدل پیشنهادی \cite{electronics9091514}}
+				\label{fig:fishing1}
+			\end{figure}
+			
+		\end{frame}
+		
+		
+		\begin{frame}{دقت مدل}
+			\begin{itemize}
+				\item دقت روی دیتاست مقاله: ۹۵٪
+				\item دقت روی دیتاست خارجی: ۵۸٪.۹۸
+				\item  بهتر از \ReverseWords{Random Forest} با دقت ۶۲٪.۹۳
+				\item[\faClipboardCheck] سرعت و دقت در سطح بالا
+				
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}{جمع بندی و کاربرد ها}
+			\begin{itemize}
+			\item تشخیص سریع توسط URL خام
+			\item کاربرد در مرورگر ها و فایروال ها
+			\item مناسب برای مقابله با حملات جدید
+			\item بدون نیاز به تخصص امنیتی
+			\item ترکیب امنیت، یادگیری و سادگی 
+			\end{itemize}
+		\end{frame}
+
 	
-	\section{Conclusion}
-	
-	%% TODO: Uncomment the next four lines to enable this frame
-	% \begin{frame}{Summary}
-		% 	%% TODO: You can add the note here
-		% 	\note{}
-		% \end{frame}
-	
-	%% TODO: Uncomment the next four lines to enable this frame
-	% \begin{frame}{Future works}		
-		% 	%% TODO: You can add the note here
-		% 	\note{}
-		% \end{frame}
-	
-	\begin{frame}{Demonstration}
-		\begin{block}{Process A}
-		\end{block}
-		\begin{block}{Scenario 1}
-		\end{block}
-		\begin{alertblock}{Scenario 2}
-		\end{alertblock}
-		\begin{block}{Process B}
-		\end{block}
-		%% TODO: You can add the note here
-		\note{}
-	\end{frame}
-	
+
+\appendix
 	%% Thank You frame
 	\begin{frame}
 		\centering
@@ -297,81 +617,13 @@
 		%% TODO: You can add the note here
 		\note{}
 	\end{frame}
-	
-	%% Appendix frames
-	\appendix
-	
-	\begin{frame}[label=scope]{Scope \hyperlink{objectives}{\beamerbutton{Back to Objectives}}}
-		%% TODO: You can add the note here
-		\note{}
-	\end{frame}
-	
-	\begin{frame}[label=algo1]{Formalizing - \texttt{Sample} Algorithm \hyperlink{process1}{\beamerbutton{Back to $\texttt{Sample}$ process}}}
-		\begin{algorithm}[H]
-			\small
-			\caption{$(\text{Result}) \gets \texttt{Sample}(\text{Input1})$}
-			\label{alg:algo1}
-			\begin{algorithmic}[1]
-				\Require $\text{Input1}$ is a predefined parameter.
-				\State $\text{Set} \gets \emptyset$
-				\For{$\text{element} \in \text{Input1}$}
-				\If{$\text{Condition}(\text{element})$ is true}
-				\State $\text{Set} \gets \text{Set} \cup \{\text{Process}(\text{element})\}$
-				\Else
-				\State \textbf{continue}
-				\EndIf
-				\EndFor
-				\State $\text{Intermediate} \gets \texttt{Transform}(\text{Set})$
-				\State \Return $\text{Result}$
-			\end{algorithmic}
-		\end{algorithm}
-		%% TODO: You can add the note here
-		\note{}
-	\end{frame}
-	
-	\begin{frame}[label=pseudocode1]{Formalizing - \texttt{Sample} Pseudocode \hyperlink{process1}{\beamerbutton{Back to $\texttt{Sample}$ process}}}
+	\begin{frame}[allowframebreaks, noframenumbering]{مراجع}
 		\begin{latin}
-
-		\begin{algorithm}[H]
-			\small
-			\caption{$(\text{Result}) \gets \texttt{Sample}(\text{Input1})$}
-			\label{alg:pseudocode1}
-			\begin{algorithmic}[1]
-				\Require $\text{Input1}$ is a predefined parameter.
-				\State $\text{Set} \gets \emptyset$
-				\For{$\text{element} \in \text{Input1}$}
-				\If{$\text{Condition}(\text{element})$ is true}
-				\State $\text{Set} \gets \text{Set} \cup \{\text{Process}(\text{element})\}$
-				\Else
-				\State \textbf{continue}
-				\EndIf
-				\EndFor
-				\State $\text{Intermediate} \gets \texttt{Transform}(\text{Set})$
-				\State \Return $\text{Result}$
-			\end{algorithmic}
-		\end{algorithm}
-			\end{latin}
-		%% TODO: You can add the note here
-		\note{}
-	\end{frame}
-	
-	%% TODO: Uncomment the next four lines to enable this frame
-	% \begin{frame}{System architecture}
-		% 	%% TODO: You can add the note here
-		% 	\note{}
-		% \end{frame}
-	
-	%% TODO: Uncomment the next four lines to enable this frame
-	% \begin{frame}{Tech strategy choices}
-		% 	%% TODO: You can add the note here
-		% 	\note{}
-		% \end{frame}
-	
-	\begin{frame}[allowframebreaks, noframenumbering]{References}
-		\begin{latin}
-				\printbibliography[heading=none]
+			\nocite{10127341}
+			\printbibliography[heading=none]
 		\end{latin}
-
+		
 	\end{frame}
+
 	
 \end{document}
