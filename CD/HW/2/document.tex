@@ -11,6 +11,10 @@
 \usepackage{colortbl}
 \usepackage[left=0.6in, right=0.6in, top=1in, bottom=0.9in]{geometry}
 \usepackage{indentfirst}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning}
 \usepackage{changepage, titlesec}
 \usepackage{booktabs}
 \usepackage{array}
@@ -331,4 +335,286 @@ $F$ & $id$  &$num$  & $(E)$  &  &  &  &  &  &  &  \\
 
 
 \end{enumerate}
+
+
+
+\section{}
+
+\begin{enumerate}
+	\item 
+	ابتدا فاکتور گیری چپ انجام می‌دهیم.
+	 \begin{latin}
+	 	$S \rightarrow iEtSA | a $ \\ 
+	 	$A \rightarrow \epsilon | eS $ \\ 
+	 	$E \rightarrow B$\\
+	 \end{latin}
+
+	\vspace{2cm}
+	
+	سپس گرامر را به فرم مورد نیاز تبدیل می‌کنیم
+	\begin{latin}
+		$0: \space S' \rightarrow S$ \\
+		$1: \space S \rightarrow iEtSA$ \\ 
+		$2: \space S \rightarrow a$ \\ 
+		$3: \space A \rightarrow eS $ \\
+		$4:\space A \rightarrow \epsilon $ \\ 
+		$5: \space E \rightarrow b$ \\
+	\end{latin}
+
+\begin{latin}
+	\begin{minipage}[t]{0.19\linewidth}
+		$I_0:$ \\
+		\(
+		S'\rightarrow .S\$ \\
+		S \rightarrow .iEtSA \\
+		S \rightarrow .a \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.19\linewidth}
+		$I_1:$ \\
+		\(
+		S'\rightarrow S.\$ \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.19\linewidth}
+		$I_2:$ \\
+		\(
+		S \rightarrow a. \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.19\linewidth}
+		$I_3:$ \\
+		\(
+		S \rightarrow i.EtSA \\
+		E \rightarrow .b
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.19\linewidth}
+		$I_4:$ \\
+		\(
+		E \rightarrow b.
+		\)
+	\end{minipage}
+		\begin{minipage}[t]{0.2\linewidth}
+		$I_5:$ \\
+		\(
+		S \rightarrow iE.tSA \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.2\linewidth}
+		$I_6:$ \\
+		\(	
+		S \rightarrow .iEt.SA \\
+		S \rightarrow .iEtSA \\
+		S \rightarrow .a \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.2\linewidth}
+		$I_7:$ \\
+		\(
+		S \rightarrow iEtS.A \\
+		A \rightarrow . \\
+		A \rightarrow eS \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.2\linewidth}
+		$I_8:$ \\
+		\(
+		S \rightarrow iEtSA. \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.2\linewidth}
+		$I_{9}:$ \\
+		\(
+		A \rightarrow e.S\\
+		S \rightarrow .iEtSA \\
+		S \rightarrow .a \\
+		\)
+	\end{minipage}
+	\begin{minipage}[t]{0.2\linewidth}
+		$I_{10}:$ \\
+		\(
+		A \rightarrow eS.
+		\)
+	\end{minipage}
+\end{latin}	
+
+\begin{latin}
+	\centering
+\begin{tikzpicture}[shorten >=1pt, node distance=2.5cm, on grid, auto] 
+	\node[state, initial] (i0)   {$I_0$}; 
+	\node[state, accepting] (i1) [above=of i0] {$I_1$}; 
+	\node[state] (i3) [right=of i0] {$I_3$}; 
+	\node[state] (i2) [below=of i3] {$I_2$}; 
+	\node[state] (i4) [above =of i3] {$I_4$};
+	\node[state] (i5) [above right=of i3] {$I_5$}; 
+	\node[state] (i6) [right=of i3] {$I_6$};
+	\node[state] (i7) [right=of i6] {$I_7$};
+	\node[state] (i8) [right=of i7]{$I_8$};
+	\node[state] (i9) [below =of i6] {$I_9$};
+	\node[state] (i10)[right=of i9] {$I_{10}$};
+	\path[->] 
+	(i0) edge[bend left] node {$i$} (i3)
+	(i0) edge[bend right] node[left] {$a$} (i2)
+	(i0) edge node {$S$} (i1)
+	(i3) edge node {$b$} (i4)
+	(i3) edge node {$E$} (i5)
+	(i5) edge node {$t$} (i6)
+	(i6) edge[bend right] node {$i$} (i3)
+	(i6) edge[bend right] node {$a$} (i2)
+	(i6) edge[bend left] node {$S$} (i7)
+	(i7) edge node {$A$} (i8)
+	(i7) edge[bend left] node {$e$} (i9)
+	(i9) edge node {$a$} (i2)
+	(i9) edge[bend right] node {$i$} (i3) 
+	(i9) edge[bend right] node {$S$} (i10) 
+	;
+	
+\end{tikzpicture}
+\end{latin}
+در $ّI_1$ با $\$$ به اکسپت می‌رویم. 
+\item 
+ ‎ 
+\begin{latin}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		 &\multicolumn{6}{c|}{\textbf{Action}} & \multicolumn{3}{c|}{\textbf{GOTO}} \\
+		\hline
+		 \textbf{state} & $a$ & $b$ & $e$ & $i$ & $t$& $\$$ &  $A$ & $E$ & $S$ \\
+		\hline
+		0&s2&&&s3&&&&&1 \\
+		\hline 
+		1&&&&&&acc&&& \\
+		\hline 
+		2&\multicolumn{6}{c|}{r2} &&& \\
+		\hline
+		3&&s4&&&&&&2& \\
+		\hline 
+		4&\multicolumn{6}{c|}{r5} &&& \\
+		\hline 
+		5&&&&&s5&&&& \\	
+		\hline	
+		6&s2&&&s3&&&&&7 \\
+		\hline 		
+		7&\multicolumn{2}{c|}{r4}&r4 \& s9&\multicolumn{3}{c|}{r4} &8&& \\
+		\hline 
+		8&\multicolumn{6}{c|}{r1} &&& \\
+		\hline 
+		9&s2&&&s3&&&&&10 \\
+		\hline
+		10&\multicolumn{6}{c|}{r3} &&& \\
+		\hline 
+	\end{tabular}
+\end{latin} 
+action های خالی به معنی error هستند!
+
+در حالت ۷ برای \lr{\texttt{Action[7,$e$]}} هم reduce داریم و هم .shift بنابراین گرامر \lr{LR(0)} نیست.
+\end{enumerate}
+
+
+\section{}
+
+\begin{enumerate}
+	\item
+	نیاز داریم گرامر را به شکل زیر تبدیل دهیم. 
+	\begin{latin}
+		\(
+		0:\space S' \rightarrow S \\
+		1:\space S \rightarrow i \\
+		2:\space S \rightarrow SS+ \\
+		3:\space S \rightarrow SS* \\
+		\)
+	\end{latin}
+	
+\begin{latin}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|l|}
+		\hline
+		&  \multicolumn{4}{c|}{\texttt{ACTION}} & \texttt{GOTO} &    \\
+		\hline 
+		\textbf{state} & $+$  & $*$  & $i$  & $\$$  & $S$ & \textbf{Explanation} \\
+		\hline
+		0 &  &  & s1 &  & 2 & Initial state; shift on `i` to state 1, go to 2 on `S` \\
+		\hline
+		1 & \multicolumn{4}{c|}{r1} &  & Reduce using rule 1: \( S \rightarrow i \) \\
+		\hline
+		2 &  &  & s1 & acc & 3 & After first `S`; shift `i` to 1 or accept if input ends \\
+		\hline
+		3 & s4 & s5 & s1 &  & 3 & After `S`; can shift `+`, `*`, or another `i` \\
+		\hline
+		4 & \multicolumn{4}{c|}{r2} &  & Reduce using rule 2: \( S \rightarrow SS+ \) \\
+		\hline
+		5 & \multicolumn{4}{c|}{r3} &  & Reduce using rule 3: \( S \rightarrow SS* \) \\
+		\hline
+	\end{tabular}
+\end{latin}
+
+\item  ‎ 
+\centering
+\begin{latin}
+	
+
+\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	step & stack  & input & handle &  action  \\
+	\hline
+	0 & $\$$  & $iii*i+*$ &  & shift  \\
+	\hline
+	1 & $\$i$  & $ii*i+*\$$ & $i$  & reduce  1 \\
+\hline
+	2 & $\$S$  & $ii*i+*\$$ &   & shift \\
+\hline
+	3 & $\$Si$  & $i*i+*\$$ & $i$  & reduce 1 \\
+\hline
+	4 & $\$SS$  & $i*i+*\$$ &   & shift \\
+\hline
+	5 & $\$SSi$  & $*i+*\$$ & $i$  & reduce 1 \\
+\hline
+	6 & $\$SSS$  & $*i+*\$$ &   & shift \\
+\hline
+	7 & $\$SSS*$  & $i+*\$$ & $SS*$  & reduce 3 \\
+\hline
+	8 & $\$SS$  & $i+*\$$ &   & shift \\
+\hline
+	9 & $\$SSi$  & $+*\$$ & $i$  & reduce 1 \\
+\hline
+	10 & $\$SSS$  & $+*\$$ &   & shift \\
+\hline
+	11 & $\$SSS+$  & $*\$$ & $SS+$  & reduce 2 \\
+\hline
+	12 & $\$SS$  & $*\$$ &   & shift \\
+\hline
+	13 & $\$SS*$  & $\$$ & $SS*$  & reduce 3 \\
+\hline
+	14 & $\$S$  & $\$$ &   & acc \\
+\hline
+\end{tabular}
+\end{latin}
+\end{enumerate}
+\section{}
+گرامر را به شکل زیر تبدیل می‌کنیم.
+\begin{latin}
+	\noindent
+	\(
+		0: S' \rightarrow S \\
+		1: S \rightarrow XdY \\
+		2: X \rightarrow aX \\
+		3: X \rightarrow \epsilon \\
+		4: Y \rightarrow bYS \\
+		5: Y \rightarrow \epsilon \\ 
+	\)
+\end{latin}
+	حال در $I_0$ داریم: 
+
+\begin{latin}
+	\noindent
+	\(
+	0: S' \rightarrow .S \\
+	1: S \rightarrow .XdY \\
+	2: X \rightarrow .aX \\
+	3: X \rightarrow . \\
+	\)
+\end{latin}
+در این حالت چون نقطه به احر رسیده است یک reduce مربوط به $3: X \rightarrow  \epsilon$ همچنین یک شیفت داریم $2: X \rightarrow .aX$ بنابراین اگر جدول را بکشیم، در یکی از خانه ها collision رخ خواهد داد پس \lr{LR(0)} نیست.
 \end{document}
