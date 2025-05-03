@@ -1,5 +1,8 @@
 import re
 
+# name: Mojtaba Mollaei
+# stdnum: 40131383
+# resources: Chatgpt, Copilot, Slides and Compilers, principles, techniques and tools by Aho, Sethi and Ullman
 
 """Reads the content of a file and returns it as a string."""
 def getfile(filename) -> str:
