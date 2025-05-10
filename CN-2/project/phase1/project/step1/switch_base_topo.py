@@ -11,8 +11,6 @@ setLogLevel('info')
 class MySingleNetwork():
     def __init__(self,num_host=4):
         self.mn = Mininet(switch=OVSSwitch)
-        # info('*** Adding controller\n')
-        # self.c0 = self.mn.addController('c0')
         info('*** Adding switch\n')
         self.s1 =  self.mn.addSwitch('s1',failMode='standalone')
         self.hosts = []
