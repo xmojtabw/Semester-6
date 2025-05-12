@@ -1,0 +1,26 @@
+mininet> pingall
+*** Ping: testing ping reachability
+h00 -> h10 h01 h11 
+h10 -> h00 h01 h11 
+h01 -> h00 h10 h11 
+h11 -> h00 h10 h01 
+*** Results: 0% dropped (12/12 received)
+mininet> h00 ping h11
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=1.20 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=0.115 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=0.153 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=0.083 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=0.192 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=0.097 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=0.107 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=0.203 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=0.075 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=0.261 ms
+64 bytes from 10.0.0.4: icmp_seq=11 ttl=64 time=0.100 ms
+64 bytes from 10.0.0.4: icmp_seq=12 ttl=64 time=0.082 ms
+^C
+--- 10.0.0.4 ping statistics ---
+12 packets transmitted, 12 received, 0% packet loss, time 11130ms
+rtt min/avg/max/mdev = 0.075/0.222/1.197/0.299 ms
+mininet> 

@@ -7,11 +7,11 @@ from mininet.log import setLogLevel, info
 setLogLevel('info')
 
 
-def torus():
+def full():
     net = Mininet(switch=OVSSwitch)
     # c0 = net.addController('c0')
     info('*** Adding switches\n')
-    s00 = net.addSwitch('s00', stp=True,failMode="standalone")
+    s00 = net.addSwitch('s00', stp=True, failMode="standalone")
     s10 = net.addSwitch('s10', stp=True, failMode="standalone")
     s01 = net.addSwitch('s01', stp=True, failMode="standalone")
     s11 = net.addSwitch('s11', stp=True, failMode="standalone")
@@ -22,6 +22,7 @@ def torus():
     net.addLink(s00, s10)
     net.addLink(s11, s10)
     net.addLink(s11, s01)
+    net.addLink(s00, s11)
 
     info('*** Adding hosts and linking to leaf switches\n')
     h00 = net.addHost('h00')
@@ -53,4 +54,4 @@ def torus():
 
 
 if __name__ == '__main__':
-    torus()
+    full()
