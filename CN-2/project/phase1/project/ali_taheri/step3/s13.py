@@ -1,4 +1,4 @@
-from ryu.app.simple_switch_stp_13 import SimpleSwitch13
+from ryu.app.simple_switch_13 import SimpleSwitch13
 from ryu.ofproto import ofproto_v1_3
 from ryu.controller import ofp_event
 from ryu.controller.handler import CONFIG_DISPATCHER, set_ev_cls

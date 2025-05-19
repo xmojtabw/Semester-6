@@ -1,9 +1,11 @@
-Linear: avg 0.178 mdev 0.265 throuput 38Gbit/s TCP, 1.05 UDP 
+Linear: avg 0.178 mdev 0.265 throuput 38 Gbit/s TCP, 4.12 Gbit/s UDP
 
-Minimal: avg 0.131 mdev 0.116 throuput 42.9Gbits TCP, 1.05 UDP 
+Minimal: avg 0.131 mdev 0.116 throuput 42.9 Gbit/s TCP, 7.40 Gbit/s UDP 
 
-Tree: avg 0.180 mdev 0.293 throuput 40.1Gbits TCP, 1.05 UDP 
+Tree: avg 0.180 mdev 0.209 throuput 40.1 Gbit/s TCP, 5.22 Gbit/s UDP 
 
-Torus: avg 0.198 mdev 0.332 throuput 37.4Gbits TCP, 1.05 UDP 
+Torus: avg 0.198 mdev 0.332 throuput 37.4 Gbit/s TCP, 2.27 Gbit/s UDP 
 
-Full: avg 0.187 mdev 0.220 thouput 41.4 Gbits TCP, 1.05 UDP 
+Full: avg 0.187 mdev 0.220 thouput 41.4 Gbit/s TCP, 4.79 Gbit/s UDP 
+
+
