@@ -1,0 +1,2 @@
+4.	(1g, Invalid number)
+7.	($, Invalid input)

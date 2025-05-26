@@ -1,0 +1,16 @@
+1.	prod
+2.	i
+3.	else
+4.	return
+5.	int
+6.	until
+7.	if
+8.	break
+9.	while
+10.	void
+11.	main
+12.	false
+13.	output
+14.	bool
+15.	true
+16.	repeat
