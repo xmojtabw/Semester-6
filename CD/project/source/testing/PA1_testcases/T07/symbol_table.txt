@@ -1,0 +1,17 @@
+1.	true
+2.	a
+3.	g
+4.	void
+5.	f
+6.	output
+7.	b
+8.	else
+9.	bool
+10.	while
+11.	break
+12.	return
+13.	repeat
+14.	if
+15.	false
+16.	int
+17.	until
