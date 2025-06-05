@@ -1,0 +1,15 @@
+\textbf {\underline {عنوان}}
+\hfill \textbf {\underline {صفحه}}\par 
+\contentsline {section}{فهرست مطالب}{هشت}{}%
+\contentsline {section}{فهرست تصاویر}{نه}{}%
+\contentsline {section}{چکیده}{1}{}%
+\contentsline {chapter}{فصل~\numberline {اول\,: مقدمه}}{2}{}%
+\contentsline {section}{\numberline {1-1}پیشینه تحقیق}{3}{}%
+\contentsline {section}{\numberline {1-2}اهداف و دستاوردهای تحقیق}{4}{}%
+\contentsline {section}{\numberline {1-3}ساختار پایان‌نامه}{5}{}%
+\contentsline {chapter}{فصل~\numberline {دوم\,: کنترل‌کننده بهینه $\mathcal {H}_2$}}{6}{}%
+\contentsline {section}{\numberline {2-1}کنترل‌کننده بهینه $\mathcal {H}_2$ برای سیستم‌های زمان‌پیوسته}{7}{}%
+\contentsline {subsection}{\numberline {2-1-1}تعریف نرم $\mathcal {H}_2$ برای سیستم‌های زمان‌پیوسته}{7}{}%
+\contentsline {chapter}{پیوست~\numberline {اول\,: تبدیل دوخطی}}{9}{}%
+\contentsline {section}{مراجع}{11}{}%
+\contentsline {section}{چکیده انگلیسی}{12}{}%
