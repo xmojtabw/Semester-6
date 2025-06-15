@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.1)  3 JUN 2025 22:49
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.1)  16 JUN 2025 00:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -216,6 +216,14 @@ Package footmisc Info: Declaring symbol style lamport* on input line 747.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 768
 .
 )
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count282
+\float@exts=\toks33
+\float@box=\box55
+\@float@everytoks=\toks34
+\@floatcapt=\box56
+)
 (/usr/share/texmf-dist/tex/latex/zref/zref-perpage.sty
 Package: zref-perpage 2023-09-14 v2.35 Module perpage for zref (HO)
 
@@ -253,13 +261,13 @@ Package zref Info: New property: page on input line 769.
 )
 (/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
-\c@abspage=\count282
+\c@abspage=\count283
 Package zref Info: New property: abspage on input line 67.
 )
 Package zref Info: New property: pagevalue on input line 57.
 Package zref Info: New property list: perpage on input line 58.
-\c@zpage=\count283
-\c@zref@unique=\count284
+\c@zpage=\count284
+\c@zref@unique=\count285
 )
 (/usr/share/texmf-dist/tex/xelatex/xepersian/xepersian.sty
 Package: xepersian 2025/02/02 v25.2.2 (Release Persian Gate) Persian typesettin
@@ -297,10 +305,10 @@ Package: expl3 2025-01-18 L3 programming layer (loader)
 
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
-\g__graphics_track_int=\count285
-\l__pdf_internal_box=\box55
-\g__pdf_backend_annotation_int=\count286
-\g__pdf_backend_link_int=\count287
+\g__graphics_track_int=\count286
+\l__pdf_internal_box=\box57
+\g__pdf_backend_annotation_int=\count287
+\g__pdf_backend_link_int=\count288
 ))
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )
@@ -309,17 +317,17 @@ Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count288
-\l__fontspec_language_int=\count289
-\l__fontspec_strnum_int=\count290
-\l__fontspec_tmp_int=\count291
-\l__fontspec_tmpa_int=\count292
-\l__fontspec_tmpb_int=\count293
-\l__fontspec_tmpc_int=\count294
-\l__fontspec_em_int=\count295
-\l__fontspec_emdef_int=\count296
-\l__fontspec_strong_int=\count297
-\l__fontspec_strongdef_int=\count298
+\l__fontspec_script_int=\count289
+\l__fontspec_language_int=\count290
+\l__fontspec_strnum_int=\count291
+\l__fontspec_tmp_int=\count292
+\l__fontspec_tmpa_int=\count293
+\l__fontspec_tmpb_int=\count294
+\l__fontspec_tmpc_int=\count295
+\l__fontspec_em_int=\count296
+\l__fontspec_emdef_int=\count297
+\l__fontspec_strong_int=\count298
+\l__fontspec_strongdef_int=\count299
 \l__fontspec_tmpa_dim=\dimen176
 \l__fontspec_tmpb_dim=\dimen177
 \l__fontspec_tmpc_dim=\dimen178
@@ -330,43 +338,43 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 (/usr/share/texmf-dist/tex/xelatex/xepersian/xepersian-persiancal.sty
 Package: xepersian-persiancal 2025/01/01 v0.3 provides Persian calendar
-\XePersian@i=\count299
-\XePersian@y=\count300
-\XePersian@m=\count301
-\XePersian@d=\count302
-\XePersian@latini=\count303
-\XePersian@persiani=\count304
-\XePersian@latinii=\count305
-\XePersian@persianii=\count306
-\XePersian@latiniii=\count307
-\XePersian@persianiii=\count308
-\XePersian@latiniv=\count309
-\XePersian@persianiv=\count310
-\XePersian@latinv=\count311
-\XePersian@persianv=\count312
-\XePersian@latinvi=\count313
-\XePersian@persianvi=\count314
-\XePersian@latinvii=\count315
-\XePersian@persianvii=\count316
-\XePersian@latinviii=\count317
-\XePersian@persianviii=\count318
-\XePersian@latinix=\count319
-\XePersian@persianix=\count320
-\XePersian@latinx=\count321
-\XePersian@persianx=\count322
-\XePersian@latinxi=\count323
-\XePersian@persianxi=\count324
-\XePersian@latinxii=\count325
-\XePersian@persianxii=\count326
-\XePersian@persianxiii=\count327
-\XePersian@temp=\count328
-\XePersian@temptwo=\count329
-\XePersian@tempthree=\count330
-\XePersian@yModHundred=\count331
-\XePersian@thirtytwo=\count332
-\XePersian@dn=\count333
-\XePersian@sn=\count334
-\XePersian@mminusone=\count335
+\XePersian@i=\count300
+\XePersian@y=\count301
+\XePersian@m=\count302
+\XePersian@d=\count303
+\XePersian@latini=\count304
+\XePersian@persiani=\count305
+\XePersian@latinii=\count306
+\XePersian@persianii=\count307
+\XePersian@latiniii=\count308
+\XePersian@persianiii=\count309
+\XePersian@latiniv=\count310
+\XePersian@persianiv=\count311
+\XePersian@latinv=\count312
+\XePersian@persianv=\count313
+\XePersian@latinvi=\count314
+\XePersian@persianvi=\count315
+\XePersian@latinvii=\count316
+\XePersian@persianvii=\count317
+\XePersian@latinviii=\count318
+\XePersian@persianviii=\count319
+\XePersian@latinix=\count320
+\XePersian@persianix=\count321
+\XePersian@latinx=\count322
+\XePersian@persianx=\count323
+\XePersian@latinxi=\count324
+\XePersian@persianxi=\count325
+\XePersian@latinxii=\count326
+\XePersian@persianxii=\count327
+\XePersian@persianxiii=\count328
+\XePersian@temp=\count329
+\XePersian@temptwo=\count330
+\XePersian@tempthree=\count331
+\XePersian@yModHundred=\count332
+\XePersian@thirtytwo=\count333
+\XePersian@dn=\count334
+\XePersian@sn=\count335
+\XePersian@mminusone=\count336
 )
 (/usr/share/texmf-dist/tex/xelatex/xepersian/unicode-persianmath.sty
 Package: unicode-persianmath 2025/02/02 v1.2.3 Unicode Persian math
@@ -404,39 +412,39 @@ setting in plain TeX and LaTeX
 ****************************************************
 (/usr/share/texmf-dist/tex/xelatex/bidi/biditools.sty
 Package: biditools 2025/02/02 v2.7 Programming tools for bidi package
-\@bidi@envbody=\toks33
-\@bidi@emptytoks=\toks34
-\bidi@poscount=\count336
-\bidi@tempcountb=\count337
-\bidi@temptoksa=\toks35
-\bidi@temptoksb=\toks36
-\bidi@dummies=\count338
-\bidi@are@these@correct=\toks37
-\bidi@toks@lista=\toks38
-\bidi@toks@listb=\toks39
-\bidi@stack@length=\count339
-\bidi@empty@stack=\toks40
-\bidi@looprepeat@depth=\count340
+\@bidi@envbody=\toks35
+\@bidi@emptytoks=\toks36
+\bidi@poscount=\count337
+\bidi@tempcountb=\count338
+\bidi@temptoksa=\toks37
+\bidi@temptoksb=\toks38
+\bidi@dummies=\count339
+\bidi@are@these@correct=\toks39
+\bidi@toks@lista=\toks40
+\bidi@toks@listb=\toks41
+\bidi@stack@length=\count340
+\bidi@empty@stack=\toks42
+\bidi@looprepeat@depth=\count341
 )
 \@bidi@copyins@=\insert252
-\bidi@typesethour=\count341
-\bidi@typesetminute=\count342
+\bidi@typesethour=\count342
+\bidi@typesetminute=\count343
 
 (/usr/share/texmf-dist/tex/xelatex/bidi/latex-xetex-bidi.def
 File: latex-xetex-bidi.def 2025/01/03 v1.5.2 bidi adaptations for `latex.ltx' f
 or XeTeX engine
-\bidi@n@everypar=\toks41
+\bidi@n@everypar=\toks43
 LaTeX Info: Redefining \centerline on input line 316.
 LaTeX Info: Redefining \leftline on input line 325.
 LaTeX Info: Redefining \rightline on input line 326.
 LaTeX Info: Redefining \underline on input line 334.
-\bidi@column@check@number=\count343
+\bidi@column@check@number=\count344
 
 (/usr/share/texmf-dist/tex/xelatex/bidi/footnote-xetex-bidi.def
 File: footnote-xetex-bidi.def 2024/12/14 v1.3 bidi footnote macros for XeTeX en
 gine
-\c@footdir@label=\count344
-\footdir@toks=\toks42
+\c@footdir@label=\count345
+\footdir@toks=\toks44
 )
 (/usr/share/texmf-dist/tex/xelatex/bidi/amsmath-xetex-bidi.def
 File: amsmath-xetex-bidi.def 2020/05/16 v1.2 bidi adaptations for amsmath packa
@@ -450,6 +458,10 @@ ge for XeTeX engine
 File: amsthm-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for amsthm package
  for XeTeX engine
 )
+(/usr/share/texmf-dist/tex/xelatex/bidi/float-xetex-bidi.def
+File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package f
+or XeTeX engine
+)
 (/usr/share/texmf-dist/tex/xelatex/bidi/geometry-xetex-bidi.def
 File: geometry-xetex-bidi.def 2017/01/14 v0.2 bidi adaptations for geometry pac
 kage for XeTeX engine
@@ -462,11 +474,11 @@ kage for XeTeX engine
 File: titlesec-xetex-bidi.def 2010/07/25 v0.1 bidi adaptations for titlesec pac
 kage for XeTeX engine
 ))
-\bidi@digits=\count345
+\bidi@digits=\count346
 \bidi@digits@charclass=\XeTeXcharclass1
 \bidi@sepmark@charclass=\XeTeXcharclass2
 )
-\xepersian@tcl=\count346
+\xepersian@tcl=\count347
 \xepersian@ilg=\dimen179
 \xepersian@strutilg=\dimen180
 
@@ -478,7 +490,7 @@ ions for footnotes for XeTeX engine
 File: report-xetex-xepersian.def 2010/07/25 v0.2 xepersian adaptations for repo
 rt class for XeTeX engine
 )
-\xepersian@toks=\toks43
+\xepersian@toks=\toks45
 )
 
 Package fontspec Info: 
@@ -555,7 +567,12 @@ persian-tex-text;"
 File: report-xetex-bidi.def 2025/02/02 v0.9 bidi adaptations for standard repor
 t class for XeTeX engine
 )
-(./document.aux)
+(/usr/share/texmf-dist/tex/xelatex/bidi/float-xetex-bidi.def
+File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package f
+or XeTeX engine
+) (./document.aux
+(./firstpages.aux) (./abstract.aux) (./moghadame.aux) (./chap1.aux)
+(./chap2.aux) (./chap3.aux) (./result.aux) (./reference.aux))
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -609,21 +626,50 @@ LaTeX Font Info:    ... okay on input line 10.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+\openout2 = `firstpages.aux'.
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+(./firstpages.tex
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 686.7347pt, 101.40665pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=686.7347pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+File: iut_logo.png Graphic file (type bmp)
+<iut_logo.png>
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 
 [1
 
-]
+
+
+])
 \openout2 = `abstract.aux'.
 
  (./abstract.tex
@@ -668,9 +714,22 @@ LaTeX Font Warning: Font shape `TU/XBZar(0)/m/sc' undefined
 LaTeX Font Warning: Font shape `TU/XBZar(0)/b/sc' undefined
 (Font)              using `TU/XBZar(0)/b/n' instead on input line 9.
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 
 [1
+
+
+
 
 
 ]
@@ -706,7 +765,7 @@ LaTeX Font Warning: Font shape `TU/XBZar(0)/b/sc' undefined
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \persianfont on input line 18.
+LaTeX Info: Redefining \persianfont on input line 16.
 
 Package fontspec Info: 
 (fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
@@ -724,9 +783,24 @@ Package fontspec Info:
 (fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
 (fontspec)             Roman/BI/OT:language=dflt;mapping=tex-text;"
 
-LaTeX Info: Redefining \latinfont on input line 19.
+LaTeX Info: Redefining \latinfont on input line 17.
+\openout2 = `moghadame.aux'.
 
+ (./moghadame.tex
 فصل 1.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 3.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 3.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 3.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 3.
+
 
 
 [2
@@ -734,23 +808,160 @@ LaTeX Info: Redefining \latinfont on input line 19.
 
 
 
-] (./document.aux (./abstract.aux))
+
+])
+
+LaTeX Font Info:    Font shape `TU/XBZar(0)/m/sl' in size <10> not available
+(Font)              Font shape `TU/XBZar(0)/m/it' tried instead on input line 2
+1.
+[3]
+\openout2 = `chap1.aux'.
+
+ (./chap1.tex
+فصل 2.
+
+
+[4
+
+
+
+
+]
+Overfull \hbox (25.21616pt too wide) in paragraph at lines 28--29
+[]\TU/XBZar(0)/m/sc/12 ویدیوی واقعی و ۴۰۰۰ ویدیوی جعلی تولیدشده با روش‌های []\T
+U/TimesNewRoman(0)/m/n/11 Deepfakes[]\TU/XBZar(0)/m/sc/12 ، []\TU/TimesNewRoman
+(0)/m/n/11 Face2Face[]\TU/XBZar(0)/m/sc/12 ، []\TU/TimesNewRoman(0)/m/n/11 Face
+Swap[] \TU/XBZar(0)/m/sc/12 و []\TU/TimesNewRoman(0)/m/n/11 NeuralTextures[][]
+ []
+
+
+
+[5]
+File: screenshot002.png Graphic file (type bmp)
+<screenshot002.png>
+
+
+[6]
+
+[7])
+
+[8]
+\openout2 = `chap2.aux'.
+
+ (./chap2.tex
+فصل 3.
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‪ (U+202A) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+
+
+[9
+
+
+
+
+]
+
+[10]
+
+[11]
+
+[12]
+
+[13])
+
+[14]
+\openout2 = `chap3.aux'.
+
+ (./chap3.tex
+فصل 4.
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‪ (U+202A) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ‫ (U+202B) in font XB Zar Bold/OT:script=latn;la
+nguage=dflt;script=arab;mapping=persian-tex-text;!
+
+
+[15
+
+
+
+
+]
+
+[16]
+File: screenshot001.png Graphic file (type bmp)
+<screenshot001.png>
+
+
+[17]
+
+[18])
+
+[19]
+\openout2 = `result.aux'.
+
+ (./result.tex
+فصل 5.
+)
+
+[20
+
+
+
+
+]
+
+[21]
+\openout2 = `reference.aux'.
+
+ (./reference.tex (./document.bbl))
+
+[22
+
+
+
+
+] (./document.aux (./firstpages.aux) (./abstract.aux) (./moghadame.aux)
+(./chap1.aux) (./chap2.aux) (./chap3.aux) (./result.aux) (./reference.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 
 
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
+
+
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 9032 strings out of 475317
- 223500 string characters out of 5762379
- 625930 words of memory out of 5000000
- 31833 multiletter control sequences out of 15000+600000
- 563810 words of font info for 95 fonts, out of 8000000 for 9000
+ 9677 strings out of 475317
+ 235497 string characters out of 5762379
+ 633906 words of memory out of 5000000
+ 32388 multiletter control sequences out of 15000+600000
+ 572056 words of font info for 144 fonts, out of 8000000 for 9000
  286 hyphenation exceptions out of 8191
- 101i,8n,112p,1730b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,8n,112p,1224b,272s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (3 pages).
+Output written on document.pdf (23 pages).
