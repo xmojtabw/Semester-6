@@ -1,0 +1,14 @@
+1.	int
+2.	bool
+3.	break
+4.	a
+5.	until
+6.	repeat
+7.	main
+8.	else
+9.	void
+10.	true
+11.	if
+12.	false
+13.	while
+14.	return
