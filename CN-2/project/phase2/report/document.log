@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.5)  16 JUN 2025 18:56
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.4.5)  22 JUN 2025 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1597,9 +1597,19 @@ File: screenshot003.png Graphic file (type bmp)
 File: screenshot004.png Graphic file (type bmp)
 <screenshot004.png>
 
+Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
+Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
+Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 171.
+
 
 [2]
-runsystem(latexminted cleantemp  --timestamp 20250616185631 FDC3BDEFB79CEC8EB82
+
+[3]
+
+[4]
+runsystem(latexminted cleantemp  --timestamp 20250622120207 FDC3BDEFB79CEC8EB82
 11D2499E04704)...executed safely (allowed).
 
  (./document.aux)
@@ -1608,15 +1618,15 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: CC9C5E7D46B36462420D296CED53E5FA;585.
+(rerunfilecheck)             Checksum: 5D34C49BB6DF19AAA4D6C06CFB593CFC;516.
  ) 
 Here is how much of TeX's memory you used:
- 42966 strings out of 475402
- 999731 string characters out of 5765235
- 1546667 words of memory out of 5000000
- 65236 multiletter control sequences out of 15000+600000
- 564138 words of font info for 92 fonts, out of 8000000 for 9000
+ 42985 strings out of 475402
+ 1000163 string characters out of 5765235
+ 1900667 words of memory out of 5000000
+ 65249 multiletter control sequences out of 15000+600000
+ 564170 words of font info for 96 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 98i,12n,101p,2405b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,13n,101p,2405b,1961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (2 pages).
+Output written on document.pdf (4 pages).
