@@ -14,8 +14,8 @@ def MyTopo():
     net = Mininet(switch=OVSSwitch)
 
     info('*** Adding switches\n')
-    s1 = net.addSwitch('s1', failMode="standalone", stp=True)
-    s2 = net.addSwitch('s2', failMode="standalone", stp=True)
+    s1 = net.addSwitch('s1')
+    s2 = net.addSwitch('s2')
 
     info('*** Adding links\n')
     net.addLink(s1, s2)

@@ -14,12 +14,13 @@ def MyTopo():
     net = Mininet(switch=OVSSwitch)
 
     info('*** Adding switches\n')
-    s1 = net.addSwitch('s1', failMode="standalone", stp=True)
-    s2 = net.addSwitch('s2', failMode="standalone", stp=True)
+    s1 = net.addSwitch('s1', failMode="standalone")
+    s2 = net.addSwitch('s2', failMode="standalone")
+    s3 = net.addSwitch('s3', failMode="standalone")
 
     info('*** Adding links\n')
-    net.addLink(s1, s2)
-    net.addLink(s2, s1)  # create loop
+    net.addLink(s1, s3)
+    net.addLink(s3, s2) 
 
     h1 = net.addHost('h1', mac=generateMac(1))
     net.addLink(h1, s1)
