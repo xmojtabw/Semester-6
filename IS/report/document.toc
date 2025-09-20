@@ -1,33 +1,36 @@
 \babel@toc {nil}{}\relax 
-\contentsline {chapter}{\numberline {1}معرفی}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}پیش‌زمینه من}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}مرکز ابررایانش شیخ بهائی}{2}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}منظور از یک خوشه \lr {HPC} چیست؟}{2}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}معماری}{3}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}نحوه کار}{3}{subsection.1.2.3}%
-\contentsline {section}{\numberline {1.3}پروژه}{4}{section.1.3}%
-\contentsline {chapter}{\numberline {2}آماده سازی}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}آماده سازی کامپیوتر‌ها}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}آماده سازی سرور‌ها}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}\lr {Proxmox}}{5}{subsection.2.2.1}%
-\contentsline {chapter}{\numberline {3}ارکستراسیون}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}\lr {Kubernetes}}{7}{section.3.1}%
-\contentsline {chapter}{\numberline {4}پیاده‌سازی شبکه}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}\lr {calico}}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}\lr {multus}}{9}{section.4.2}%
-\contentsline {section}{\numberline {4.3}\lr {macvtap}}{9}{section.4.3}%
-\contentsline {section}{\numberline {4.4}\lr {bridge}}{9}{section.4.4}%
-\contentsline {section}{\numberline {4.5}\lr {kubemacpool}}{9}{section.4.5}%
-\contentsline {chapter}{\numberline {5}بستر مجازی سازی در \lr {k8s}}{10}{chapter.5}%
-\contentsline {section}{\numberline {5.1}\lr {Kubevirt}}{10}{section.5.1}%
-\contentsline {section}{\numberline {5.2}منابع ماشین ها}{10}{section.5.2}%
-\contentsline {section}{\numberline {5.3}انتقال زنده}{10}{section.5.3}%
-\contentsline {section}{\numberline {5.4}تخصیص منابع به صورت زنده}{10}{section.5.4}%
-\contentsline {chapter}{\numberline {6}\lr {Windows image}}{11}{chapter.6}%
-\contentsline {section}{\numberline {6.1}گرفتن اطلاعات}{11}{section.6.1}%
-\contentsline {section}{\numberline {6.2}تنطیمات اضافی}{11}{section.6.2}%
-\contentsline {chapter}{\numberline {7}\lr {kubevirt-manager}}{12}{chapter.7}%
-\contentsline {chapter}{\numberline {8}نظارت}{13}{chapter.8}%
-\contentsline {section}{\numberline {8.1}\lr {Prometheus}}{13}{section.8.1}%
-\contentsline {section}{\numberline {8.2}\lr {Graphana}}{13}{section.8.2}%
-\contentsline {chapter}{\numberline {آ}اطلاعات اضافی}{14}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {1}معرفی}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}پیش‌زمینه من}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}مرکز ابررایانش شیخ بهائی}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}منظور از یک خوشه \lr {HPC} چیست؟}{3}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}معماری}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}نحوه کار}{4}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}پروژه}{5}{section.1.3}%
+\contentsline {chapter}{\numberline {2}آماده سازی}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}آماده سازی کامپیوتر‌ها}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}آماده سازی سرور‌ها}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}\lr {Proxmox}}{6}{subsection.2.2.1}%
+\contentsline {chapter}{\numberline {3}ارکستراسیون}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}\lr {Kubernetes} معرفی}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}نحوه کار}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}کاربرد در پروژه}{9}{section.3.3}%
+\contentsline {section}{\numberline {3.4}نصب \lr {k8s}}{9}{section.3.4}%
+\contentsline {chapter}{\numberline {4}پیاده‌سازی شبکه}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}\lr {calico}}{10}{section.4.1}%
+\contentsline {section}{\numberline {4.2}\lr {multus}}{10}{section.4.2}%
+\contentsline {section}{\numberline {4.3}\lr {macvtap}}{10}{section.4.3}%
+\contentsline {section}{\numberline {4.4}\lr {bridge}}{10}{section.4.4}%
+\contentsline {section}{\numberline {4.5}\lr {kubemacpool}}{10}{section.4.5}%
+\contentsline {chapter}{\numberline {5}بستر مجازی سازی در \lr {k8s}}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}\lr {Kubevirt}}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}منابع ماشین ها}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}انتقال زنده}{11}{section.5.3}%
+\contentsline {section}{\numberline {5.4}تخصیص منابع به صورت زنده}{11}{section.5.4}%
+\contentsline {chapter}{\numberline {6}\lr {Windows image}}{12}{chapter.6}%
+\contentsline {section}{\numberline {6.1}گرفتن اطلاعات}{12}{section.6.1}%
+\contentsline {section}{\numberline {6.2}تنطیمات اضافی}{12}{section.6.2}%
+\contentsline {chapter}{\numberline {7}\lr {kubevirt-manager}}{13}{chapter.7}%
+\contentsline {chapter}{\numberline {8}نظارت}{14}{chapter.8}%
+\contentsline {section}{\numberline {8.1}\lr {Prometheus}}{14}{section.8.1}%
+\contentsline {section}{\numberline {8.2}\lr {Graphana}}{14}{section.8.2}%
+\contentsline {chapter}{\numberline {آ}اطلاعات اضافی}{15}{appendix.Alph1}%
