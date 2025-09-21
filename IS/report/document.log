@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.9.17)  20 SEP 2025 14:54
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.9.17)  21 SEP 2025 10:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,6 +1088,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: kuber_arch.png Graphic file (type bmp)
 <kuber_arch.png>
 
+Overfull \hbox (19.56186pt too wide) in paragraph at lines 237--249
+[][][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--249
+[][]
+ []
+
+Missing character: There is no k (U+006B) in font B Nazanin/OT:language=dflt;sc
+ript=arab;mapping=persian-tex-text;!
+Missing character: There is no s (U+0073) in font B Nazanin/OT:language=dflt;sc
+ript=arab;mapping=persian-tex-text;!
+Missing character: There is no k (U+006B) in font B Nazanin/OT:language=dflt;sc
+ript=arab;mapping=persian-tex-text;!
+Missing character: There is no s (U+0073) in font B Nazanin/OT:language=dflt;sc
+ript=arab;mapping=persian-tex-text;!
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1097,6 +1115,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9]
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[10]
 فصل 4.
 
 Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
@@ -2119,14 +2146,14 @@ ript=arab;mapping=persian-tex-text;!
 Missing character: There is no s (U+0073) in font B Nazanin/OT:language=dflt;sc
 ript=arab;mapping=persian-tex-text;!
 
-Overfull \hbox (3.63889pt too wide) in paragraph at lines 242--242
+Overfull \hbox (3.63889pt too wide) in paragraph at lines 267--267
 []\TU/BNazanin(0)/m/sc/12 quis congue purus metus ultricies tellus. Proin et qu
 am. Class aptent taciti sociosqu[]
  []
 
 
 
-[10
+[11
 
 ]
 فصل 5.
@@ -3165,20 +3192,20 @@ ript=arab;mapping=persian-tex-text;!
 Missing character: There is no i (U+0069) in font B Nazanin/OT:language=dflt;sc
 ript=arab;mapping=persian-tex-text;!
 
-Overfull \hbox (6.51648pt too wide) in paragraph at lines 249--249
+Overfull \hbox (6.51648pt too wide) in paragraph at lines 274--274
 []\TU/BNazanin(0)/m/sc/12 Pellentesque habitant morbi tristique senectus et net
 us et malesuada fames ac turpis[]
  []
 
 
-Overfull \hbox (0.26389pt too wide) in paragraph at lines 249--249
+Overfull \hbox (0.26389pt too wide) in paragraph at lines 274--274
 []\TU/BNazanin(0)/m/sc/12 lorem. Sed neque lectus، consectetuer at، consectetue
 r sed، eleifend ac، lectus. Nulla[]
  []
 
 
 
-[11
+[12
 
 ]
 فصل 6.
@@ -4612,13 +4639,13 @@ Missing character: There is no s (U+0073) in font B Nazanin/OT:language=dflt;sc
 ript=arab;mapping=persian-tex-text;!
 
 
-[12
+[13
 
 ]
 فصل 7.
 
 
-[13
+[14
 
 ]
 فصل 8.
@@ -5533,20 +5560,20 @@ ript=arab;mapping=persian-tex-text;!
 Missing character: There is no i (U+0069) in font B Nazanin/OT:language=dflt;sc
 ript=arab;mapping=persian-tex-text;!
 
-Overfull \hbox (5.57248pt too wide) in paragraph at lines 260--260
+Overfull \hbox (5.57248pt too wide) in paragraph at lines 285--285
 []\TU/BNazanin(0)/m/sc/12 molestie et، lobortis in، sodales eget، dui. Morbi ul
 trices rutrum lorem. Nam elementum[]
  []
 
 
-Overfull \hbox (9.86806pt too wide) in paragraph at lines 260--260
+Overfull \hbox (9.86806pt too wide) in paragraph at lines 285--285
 []\TU/BNazanin(0)/m/sc/12 sodales est. Maecenas imperdiet lacinia velit. Cras n
 on urna. Morbi eros pede، suscipit[]
  []
 
 
 
-[14
+[15
 
 ]
 پیوست آ.
@@ -6200,7 +6227,7 @@ Missing character: There is no r (U+0072) in font B Nazanin/OT:language=dflt;sc
 ript=arab;mapping=persian-tex-text;!
 
 
-[15
+[16
 
 ] (./document.aux)
  ***********
@@ -6212,15 +6239,15 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: BE2C0723E853DC0649BA1AEEA8CBD424;4870.
+(rerunfilecheck)             Checksum: 221F2EE0E0E2E8BEDB7204D60F23FB85;4926.
  ) 
 Here is how much of TeX's memory you used:
- 20909 strings out of 475836
- 418839 string characters out of 5775614
- 952652 words of memory out of 5000000
- 43463 multiletter control sequences out of 15000+600000
+ 20940 strings out of 475836
+ 419369 string characters out of 5775614
+ 952893 words of memory out of 5000000
+ 43494 multiletter control sequences out of 15000+600000
  568900 words of font info for 109 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 88i,11n,93p,1208b,425s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,12n,93p,1208b,425s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on document.pdf (17 pages).
+Output written on document.pdf (18 pages).
