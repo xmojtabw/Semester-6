@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.8.31)  21 SEP 2025 21:36
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2026/dev/Arch Linux) (preloaded format=xelatex 2025.9.17)  22 SEP 2025 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -105,7 +105,7 @@ Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaT
 eX and XeLaTeX
 \babel@savecnt=\count275
 \U@D=\dimen146
-\l@unhyphenated=\language37
+\l@unhyphenated=\language5
 
 (/usr/share/texmf-dist/tex/generic/babel/xebabel.def)
 \bbl@readstream=\read2
@@ -115,7 +115,7 @@ Package babel Info: You haven't specified a language as a class or package
 
 (/usr/share/texmf-dist/tex/generic/babel/nil.ldf
 Language: nil 2025/02/14 v25.4 Nil language
-\l@nil=\language38
+\l@nil=\language6
 ))
 (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
@@ -1125,8 +1125,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10]
 فصل 4.
-Missing character: There is no ٔ (U+0654) in font B Nazanin/OT:language=dflt;sc
-ript=arab;mapping=persian-tex-text;!
 
 
 [11
@@ -2181,13 +2179,13 @@ ript=arab;mapping=persian-tex-text;!
 Missing character: There is no i (U+0069) in font B Nazanin/OT:language=dflt;sc
 ript=arab;mapping=persian-tex-text;!
 
-Overfull \hbox (6.51648pt too wide) in paragraph at lines 282--282
+Overfull \hbox (6.51648pt too wide) in paragraph at lines 292--292
 []\TU/BNazanin(0)/m/sc/12 Pellentesque habitant morbi tristique senectus et net
 us et malesuada fames ac turpis[]
  []
 
 
-Overfull \hbox (0.26389pt too wide) in paragraph at lines 282--282
+Overfull \hbox (0.26389pt too wide) in paragraph at lines 292--292
 []\TU/BNazanin(0)/m/sc/12 lorem. Sed neque lectus، consectetuer at، consectetue
 r sed، eleifend ac، lectus. Nulla[]
  []
@@ -4549,13 +4547,13 @@ ript=arab;mapping=persian-tex-text;!
 Missing character: There is no i (U+0069) in font B Nazanin/OT:language=dflt;sc
 ript=arab;mapping=persian-tex-text;!
 
-Overfull \hbox (5.57248pt too wide) in paragraph at lines 293--293
+Overfull \hbox (5.57248pt too wide) in paragraph at lines 303--303
 []\TU/BNazanin(0)/m/sc/12 molestie et، lobortis in، sodales eget، dui. Morbi ul
 trices rutrum lorem. Nam elementum[]
  []
 
 
-Overfull \hbox (9.86806pt too wide) in paragraph at lines 293--293
+Overfull \hbox (9.86806pt too wide) in paragraph at lines 303--303
 []\TU/BNazanin(0)/m/sc/12 sodales est. Maecenas imperdiet lacinia velit. Cras n
 on urna. Morbi eros pede، suscipit[]
  []
@@ -5227,22 +5225,16 @@ L3 programming layer <2025-01-18>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-Package rerunfilecheck Warning: File `document.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `document.out':
-(rerunfilecheck)             Before: 6412AE5DF18CFE0307589CFEEB625E37;4844
-(rerunfilecheck)             After:  448791D63B4745FDF8D22C0E44F0F1A5;4877.
+Package rerunfilecheck Info: File `document.out' has not changed.
+(rerunfilecheck)             Checksum: 448791D63B4745FDF8D22C0E44F0F1A5;4877.
  ) 
 Here is how much of TeX's memory you used:
- 20946 strings out of 475317
- 419454 string characters out of 5762378
- 954735 words of memory out of 5000000
- 43556 multiletter control sequences out of 15000+600000
+ 20956 strings out of 475836
+ 419589 string characters out of 5775614
+ 952938 words of memory out of 5000000
+ 43510 multiletter control sequences out of 15000+600000
  568900 words of font info for 109 fonts, out of 8000000 for 9000
- 286 hyphenation exceptions out of 8191
+ 14 hyphenation exceptions out of 8191
  88i,12n,93p,1208b,402s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on document.pdf (19 pages).
